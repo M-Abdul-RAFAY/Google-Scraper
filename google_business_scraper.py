@@ -211,67 +211,99 @@ Solutions to try:
     def _scroll_and_load_all_results(self):
         """Scroll the results panel to load ALL businesses using endless scrolling."""
         try:
-            # Find the scrollable results panel using multiple selectors
-            results_panel = None
-            panel_selectors = [
-                '[role="main"]',
-                '.m6QErb',
-                '#pane',
-                '.section-scrollbox',
-                '.siAUzd',
-                'div[role="main"] > div > div'
-            ]
-            
-            for selector in panel_selectors:
-                try:
-                    panel = self.driver.find_element(By.CSS_SELECTOR, selector)
-                    if panel:
-                        results_panel = panel
-                        self.logger.info(f"Found scrollable panel with selector: {selector}")
-                        break
-                except:
-                    continue
-            
-            if not results_panel:
-                self.logger.warning("Could not find scrollable results panel")
-                return
-            
-            last_height = self.driver.execute_script("return arguments[0].scrollHeight", results_panel)
-            scrolls = 0
-            no_change_count = 0
-            max_no_change = 3  # Stop after 3 consecutive scrolls with no new content
-            
             self.logger.info("Starting endless scrolling to load all businesses...")
             
-            while no_change_count < max_no_change:
+            scrolls = 0
+            consecutive_no_change = 0
+            max_consecutive_no_change = 8  # More patience for loading
+            
+            while consecutive_no_change < max_consecutive_no_change:
                 # Count current business elements before scrolling
-                current_count = len(self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc'))
+                current_businesses = self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc')
+                current_count = len(current_businesses)
                 
-                # Scroll down
-                self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", results_panel)
-                time.sleep(4)  # Wait for new content to load
+                # Get the last business element to scroll to it
+                if current_businesses:
+                    last_business = current_businesses[-1]
+                    
+                    try:
+                        # Scroll to the last business element
+                        self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", last_business)
+                        time.sleep(2)
+                        
+                        # Then scroll down more to trigger loading
+                        self.driver.execute_script("window.scrollBy(0, 500);")
+                        time.sleep(2)
+                        
+                        # Also try scrolling within the results container
+                        try:
+                            results_container = self.driver.find_element(By.CSS_SELECTOR, 'div[role="main"] .m6QErb')
+                            self.driver.execute_script("arguments[0].scrollTop += 1000;", results_container)
+                        except:
+                            pass
+                        
+                        # Try clicking on the last business to trigger more loading
+                        try:
+                            self.driver.execute_script("arguments[0].click();", last_business)
+                            time.sleep(1)
+                            # Press escape to close any popup
+                            from selenium.webdriver.common.keys import Keys
+                            self.driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.ESCAPE)
+                            time.sleep(1)
+                        except:
+                            pass
+                            
+                    except Exception as e:
+                        self.logger.debug(f"Error in scrolling approach: {e}")
+                
+                # Wait longer for content to load
+                time.sleep(5)
+                
+                # Check for a "Show more results" or similar button
+                try:
+                    more_results_selectors = [
+                        'button[data-value="See more results"]',
+                        'button:contains("more")',
+                        '.more-results',
+                        '[aria-label*="more"]',
+                        'button[jsaction*="more"]'
+                    ]
+                    
+                    for selector in more_results_selectors:
+                        try:
+                            more_button = self.driver.find_element(By.CSS_SELECTOR, selector)
+                            if more_button and more_button.is_displayed():
+                                self.driver.execute_script("arguments[0].click();", more_button)
+                                self.logger.info("Clicked 'Show more results' button")
+                                time.sleep(3)
+                                break
+                        except:
+                            continue
+                except:
+                    pass
                 
                 # Count business elements after scrolling
-                new_count = len(self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc'))
+                new_businesses = self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc')
+                new_count = len(new_businesses)
                 
                 scrolls += 1
                 
-                # Check if new businesses loaded (more reliable than scroll height)
+                # Check if new businesses loaded
                 if new_count > current_count:
-                    no_change_count = 0  # Reset counter when new content is found
-                    self.logger.info(f"   Scroll {scrolls}: Found {new_count - current_count} new businesses (total: {new_count})")
+                    consecutive_no_change = 0  # Reset counter when new content is found
+                    new_business_count = new_count - current_count
+                    self.logger.info(f"   Scroll {scrolls}: Found {new_business_count} new businesses (total: {new_count})")
                 else:
-                    no_change_count += 1
-                    self.logger.info(f"   No new businesses loaded (attempt {no_change_count}/{max_no_change})")
-                
-                last_height = new_count  # Track business count instead of height
+                    consecutive_no_change += 1
+                    self.logger.info(f"   Scroll {scrolls}: No new businesses loaded (attempt {consecutive_no_change}/{max_consecutive_no_change})")
                 
                 # Safety check - prevent infinite scrolling
-                if scrolls > 50:  # Reasonable limit for most searches
+                if scrolls > 50:
                     self.logger.info("Reached maximum scroll limit (50 scrolls)")
                     break
                     
-            self.logger.info(f"Scrolling completed after {scrolls} scrolls")
+            final_count = len(self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc'))
+            self.logger.info(f"Scrolling completed after {scrolls} scrolls. Total businesses loaded: {final_count}")
                 
         except Exception as e:
             self.logger.warning(f"Error scrolling results: {str(e)}")
