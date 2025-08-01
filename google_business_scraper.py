@@ -35,12 +35,12 @@ class GoogleBusinessScraper:
         self.timeout = timeout
         self.ua = UserAgent()
         
-        # Setup logging
+        # Setup logging with UTF-8 encoding to handle special characters
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('scraper.log'),
+                logging.FileHandler('scraper.log', encoding='utf-8'),
                 logging.StreamHandler()
             ]
         )
@@ -256,8 +256,8 @@ Solutions to try:
                     except Exception as e:
                         self.logger.debug(f"Error in scrolling approach: {e}")
                 
-                # Wait longer for content to load
-                time.sleep(5)
+                # Wait for content to load (reduced for faster scrolling)
+                time.sleep(2.5)
                 
                 # Check for a "Show more results" or similar button
                 try:
@@ -275,7 +275,7 @@ Solutions to try:
                             if more_button and more_button.is_displayed():
                                 self.driver.execute_script("arguments[0].click();", more_button)
                                 self.logger.info("Clicked 'Show more results' button")
-                                time.sleep(3)
+                                time.sleep(2)  # Reduced wait time after clicking
                                 break
                         except:
                             continue
@@ -375,137 +375,461 @@ Solutions to try:
             self.logger.warning(f"Error scrolling results: {str(e)}")
     
     def _extract_all_businesses_from_results(self) -> List[Dict]:
-        """Extract ALL business data directly from search results."""
+        """Extract ALL business data directly from search results with memory-efficient batching."""
         businesses = []
         
         try:
-            # Updated selectors for business listings in search results
-            business_selectors = [
-                'div[role="article"]',  # Article role containers
-                '.hfpxzc',  # Main business result containers
-                '[data-result-index]',  # Indexed results
-                '.Nv2PK',  # Alternative selector
-                'a[data-cid]',  # Business links with CID
-                '[jsaction*="pane"]',  # Elements with pane actions
-                '.VkpGBb',  # Another common selector
-                '.bfdHYd',  # Business card containers
-                '.section-result',  # Section results
-                'div[jsaction*="pane.resultItem"]',  # Interactive result items
-                'a[href*="/maps/place/"]'  # Direct place links
-            ]
+            self.logger.info("Starting business data extraction...")
             
-            business_elements = []
-            for selector in business_selectors:
-                try:
-                    elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if elements:
-                        business_elements.extend(elements)
-                        self.logger.info(f"Found {len(elements)} elements with selector: {selector}")
-                        break  # Use the first selector that works
-                except Exception as e:
-                    self.logger.debug(f"Selector {selector} failed: {str(e)}")
-                    continue
+            # Use the most reliable selector
+            primary_selector = '.hfpxzc'
             
-            # Remove duplicates more intelligently
-            processed_elements = []
-            seen_elements = set()
+            # Track extracted businesses to avoid duplicates
+            seen_business_names = set()
             
-            for element in business_elements:  # Process all found elements
-                try:
-                    # Use a more comprehensive identifier for deduplication
-                    element_id = element.get_attribute('data-cid') or element.get_attribute('data-feature-id') or str(element.location)
-                    
-                    if element_id not in seen_elements:
-                        processed_elements.append(element)
-                        seen_elements.add(element_id)
-                except:
-                    # If we can't get a unique identifier, still try to process
-                    processed_elements.append(element)
-                    continue
+            # Process businesses in smaller batches to prevent memory issues
+            batch_size = 20  # Process 20 businesses at a time
+            processed_count = 0
             
-            self.logger.info(f"Processing {len(processed_elements)} unique business elements")
-            
-            # Extract data from each business element
-            for i, element in enumerate(processed_elements):
-                try:
-                    business_data = self._extract_business_data_from_element(element, i + 1)
-                    if business_data and business_data.get('name'):  # Only add if we got a name
-                        businesses.append(business_data)
-                        self.logger.info(f"Extracted business {len(businesses)}: {business_data.get('name', 'Unknown')}")
+            while True:
+                # Re-find elements each batch to avoid stale references
+                business_elements = self.driver.find_elements(By.CSS_SELECTOR, primary_selector)
+                
+                # Check if we've processed all available elements
+                if processed_count >= len(business_elements):
+                    self.logger.info(f"Processed all {len(business_elements)} available business elements")
+                    break
+                
+                # Get the next batch
+                batch_start = processed_count
+                batch_end = min(processed_count + batch_size, len(business_elements))
+                current_batch = business_elements[batch_start:batch_end]
+                
+                self.logger.info(f"Processing batch {batch_start + 1}-{batch_end} of {len(business_elements)} total elements")
+                
+                # Process each element in the current batch
+                for i, element in enumerate(current_batch):
+                    try:
+                        # Extract basic data first (faster and more reliable)
+                        basic_data = self._extract_basic_data_from_element(element, len(businesses) + 1)
+                        
+                        if basic_data and basic_data.get('name'):
+                            business_name = basic_data.get('name', '').strip().lower()
                             
-                except Exception as e:
-                    self.logger.error(f"Error extracting data from element {i+1}: {str(e)}")
-                    continue
-                    
+                            # Check for duplicates
+                            if business_name and business_name not in seen_business_names:
+                                
+                                # Try to get additional data by clicking (with proper timing)
+                                try:
+                                    # Scroll element into view
+                                    self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+                                    time.sleep(0.5)  # Wait for scroll to complete
+                                    
+                                    # Try clicking for detailed info
+                                    element.click()
+                                    time.sleep(2.0)  # Wait 2 seconds as requested by user
+                                    
+                                    # Wait for sidebar content to fully load
+                                    try:
+                                        # Wait for sidebar to be present and stable
+                                        WebDriverWait(self.driver, 3).until(
+                                            EC.presence_of_element_located((By.CSS_SELECTOR, "[data-value='Directions'], .TIHn2, .m6QErb"))
+                                        )
+                                        time.sleep(1.0)  # Additional wait for all content to render
+                                    except TimeoutException:
+                                        # If sidebar doesn't load normally, still wait minimum time
+                                        time.sleep(1.0)
+                                    
+                                    # Try to extract additional data from sidebar
+                                    detailed_data = self._extract_quick_sidebar_data()
+                                    if detailed_data:
+                                        # Merge with basic data
+                                        for key, value in detailed_data.items():
+                                            if value and (key not in basic_data or not basic_data[key]):
+                                                basic_data[key] = value
+                                                
+                                except Exception as click_error:
+                                    self.logger.debug(f"Click failed for {business_name}: {str(click_error)[:50]}...")
+                                
+                                # Add required fields
+                                required_fields = ['rating', 'reviews_count', 'category', 'address', 'phone', 'website', 'hours', 'price_range', 'description']
+                                for field in required_fields:
+                                    if field not in basic_data:
+                                        basic_data[field] = ""
+                                
+                                basic_data['index'] = len(businesses) + 1
+                                businesses.append(basic_data)
+                                seen_business_names.add(business_name)
+                                
+                                self.logger.info(f"[{len(businesses)}] Extracted: {basic_data.get('name')} - Rating: {basic_data.get('rating', 'N/A')} - Category: {basic_data.get('category', 'N/A')}")
+                                
+                            else:
+                                self.logger.debug(f"[SKIP] Duplicate business: {basic_data.get('name')}")
+                        else:
+                            self.logger.debug(f"[SKIP] No valid name from element {batch_start + i + 1}")
+                            
+                    except Exception as e:
+                        self.logger.debug(f"[ERROR] Failed to extract from element {batch_start + i + 1}: {str(e)[:50]}...")
+                        continue
+                
+                processed_count = batch_end
+                
+                # Memory cleanup every batch
+                if len(businesses) % 50 == 0 and len(businesses) > 0:
+                    self.logger.info(f"Extracted {len(businesses)} businesses so far...")
+                
+                # Small delay between batches to prevent overloading
+                time.sleep(0.5)
+                
         except Exception as e:
-            self.logger.error(f"Error extracting businesses from results: {str(e)}")
+            self.logger.error(f"Error in business extraction process: {str(e)}")
         
+        self.logger.info(f"Total businesses extracted: {len(businesses)}")
         return businesses
     
-    def _extract_business_data_from_element(self, element, index: int) -> Optional[Dict]:
-        """Extract business data from a single search result element."""
+    def _extract_quick_sidebar_data(self) -> Optional[Dict]:
+        """Extract comprehensive data from sidebar with proper wait for complete loading."""
         try:
-            # First try to extract basic info directly from the element without clicking
-            basic_data = self._extract_basic_data_from_element(element, index)
+            data = {}
             
-            # If we got some basic data, try clicking for more detailed info
-            if basic_data and basic_data.get('name'):
-                try:
-                    # Click on the element to open the sidebar with detailed info
-                    self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
-                    time.sleep(1)
-                    self.actions.move_to_element(element).click().perform()
-                    time.sleep(3)  # Wait for sidebar to load
-                    
-                    # Now extract detailed data from the opened sidebar
-                    detailed_data = self._extract_detailed_data_from_sidebar()
-                    
-                    # Merge basic and detailed data
-                    business_data = {**basic_data, **detailed_data}
-                    return business_data
-                    
-                except Exception as e:
-                    self.logger.warning(f"Could not click element {index} for detailed info: {str(e)}")
-                    # Return basic data if clicking fails
-                    return basic_data
-            else:
-                # If no basic data, still try clicking approach
-                try:
-                    self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
-                    time.sleep(1)
-                    self.actions.move_to_element(element).click().perform()
-                    time.sleep(3)  # Wait for sidebar to load
-                    
-                    business_data = {
-                        'index': index,
-                        'name': self._extract_sidebar_name(),
-                        'rating': self._extract_sidebar_rating(),
-                        'reviews_count': self._extract_sidebar_reviews_count(),
-                        'category': self._extract_sidebar_category(),
-                        'address': self._extract_sidebar_address(),
-                        'phone': self._extract_sidebar_phone(),
-                        'website': self._extract_sidebar_website(),
-                        'hours': self._extract_sidebar_hours(),
-                        'price_range': self._extract_sidebar_price_range(),
-                        'description': self._extract_sidebar_description()
-                    }
-                    
-                    return business_data
-                    
-                except Exception as e:
-                    self.logger.error(f"Error extracting business data from element {index}: {str(e)}")
-                    return None
+            # Wait a bit more for sidebar content to stabilize
+            time.sleep(0.5)
+            
+            # Quick rating extraction with multiple selectors
+            try:
+                rating_selectors = [
+                    '.F7nice span[aria-label*="stars"]',
+                    '.F7nice .fontBodyMedium',
+                    '[data-value] span',
+                    '.aMPvhf-fI6EEc-KVuj8d'
+                ]
+                
+                for selector in rating_selectors:
+                    try:
+                        rating_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        rating_text = rating_element.text or rating_element.get_attribute('aria-label') or ""
+                        rating_match = re.search(r'(\d+\.?\d*)', rating_text)
+                        if rating_match:
+                            rating = rating_match.group(1)
+                            if 0 <= float(rating) <= 5:
+                                data['rating'] = rating
+                                break
+                    except:
+                        continue
+            except:
+                pass
+            
+            # Quick reviews count extraction with better parsing
+            try:
+                reviews_selectors = [
+                    '.F7nice span[aria-label*="reviews"]',
+                    '.F7nice span[aria-label*="review"]',
+                    '.UY7F9'
+                ]
+                
+                for selector in reviews_selectors:
+                    try:
+                        reviews_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        reviews_text = reviews_element.text or reviews_element.get_attribute('aria-label') or ""
+                        # Look for numbers in parentheses or standalone numbers
+                        count_match = re.search(r'[\(\s](\d+,?\d*)[\)\s]|(\d+,?\d+)\s*review', reviews_text)
+                        if count_match:
+                            count = count_match.group(1) or count_match.group(2)
+                            data['reviews_count'] = count.replace(',', '')
+                            break
+                    except:
+                        continue
+            except:
+                pass
+            
+            # Enhanced category extraction with multiple approaches
+            try:
+                category_selectors = [
+                    'button[jsaction*="category"]',
+                    '.DkEaL',
+                    'button.DkEaL',
+                    '.LBgpqf',
+                    '[data-value="Categories"] + div'
+                ]
+                
+                for selector in category_selectors:
+                    try:
+                        category_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        category_text = category_element.text.strip()
+                        if category_text and 'directions' not in category_text.lower() and len(category_text) < 100:
+                            data['category'] = category_text
+                            break
+                    except:
+                        continue
+                        
+                # If no category found via selectors, try text parsing
+                if 'category' not in data:
+                    try:
+                        page_text = self.driver.find_element(By.TAG_NAME, 'body').text
+                        lines = page_text.split('\n')
+                        for line in lines[:20]:  # Check first 20 lines
+                            line = line.strip()
+                            if any(cat_word in line.lower() for cat_word in ['restaurant', 'cafe', 'bar', 'grill', 'kitchen', 'diner', 'bistro']):
+                                if len(line) < 50 and line not in ['Restaurant', 'Restaurants']:
+                                    data['category'] = line
+                                    break
+                    except:
+                        pass
+            except:
+                pass
+            
+            # Enhanced address extraction
+            try:
+                address_selectors = [
+                    'button[data-item-id="address"] .Io6YTe',
+                    'button[aria-label*="Address"]',
+                    '.Io6YTe',
+                    '.LrzXr'
+                ]
+                
+                for selector in address_selectors:
+                    try:
+                        address_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        address_text = address_element.text.strip() or address_element.get_attribute('aria-label')
+                        if address_text:
+                            if 'Address:' in address_text:
+                                address_clean = address_text.replace('Address:', '').strip()
+                                if len(address_clean) > 10:
+                                    data['address'] = address_clean
+                                    break
+                            elif any(addr_word in address_text.lower() for addr_word in ['street', 'st ', ' st', 'ave', 'avenue', 'ny ', 'new york']) and len(address_text) > 10:
+                                data['address'] = address_text
+                                break
+                    except:
+                        continue
+            except:
+                pass
+            
+            # Enhanced phone extraction
+            try:
+                phone_selectors = [
+                    'button[data-item-id*="phone"] .Io6YTe',
+                    'button[aria-label*="Phone"]',
+                    'button[aria-label*="Call"]'
+                ]
+                
+                for selector in phone_selectors:
+                    try:
+                        phone_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        phone_text = phone_element.text.strip() or phone_element.get_attribute('aria-label')
+                        if phone_text:
+                            if 'Phone:' in phone_text:
+                                phone_clean = phone_text.replace('Phone:', '').strip()
+                                if self._is_valid_phone(phone_clean):
+                                    data['phone'] = phone_clean
+                                    break
+                            elif self._is_valid_phone(phone_text):
+                                data['phone'] = phone_text
+                                break
+                    except:
+                        continue
+            except:
+                pass
+            
+            # Website extraction
+            try:
+                website_selectors = [
+                    'button[data-item-id*="website"] .Io6YTe',
+                    'button[aria-label*="Website"]',
+                    'a[href*="http"]'
+                ]
+                
+                for selector in website_selectors:
+                    try:
+                        website_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        website_text = website_element.text.strip() or website_element.get_attribute('href')
+                        if website_text and ('http' in website_text or '.com' in website_text):
+                            data['website'] = website_text
+                            break
+                    except:
+                        continue
+            except:
+                pass
+            
+            return data if data else None
             
         except Exception as e:
-            self.logger.error(f"Error extracting business data from element {index}: {str(e)}")
+            self.logger.debug(f"Enhanced sidebar extraction failed: {e}")
             return None
+    
+    def _extract_business_data_from_element(self, element, index: int) -> Optional[Dict]:
+        """Extract business data from a single search result element with enhanced robustness."""
+        try:
+            self.logger.debug(f"Extracting data from element {index}")
+            
+            # First attempt: Extract basic info directly from the element
+            basic_data = self._extract_basic_data_from_element(element, index)
+            
+            # Initialize with basic data
+            business_data = basic_data.copy() if basic_data else {'index': index}
+            
+            # Attempt to click for detailed information
+            detailed_data = None
+            click_successful = False
+            
+            try:
+                # Ensure element is in view and clickable
+                self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+                time.sleep(0.3)  # Brief pause for scrolling
+                
+                # Multiple click strategies
+                click_methods = [
+                    lambda: element.click(),
+                    lambda: self.actions.move_to_element(element).click().perform(),
+                    lambda: self.driver.execute_script("arguments[0].click();", element)
+                ]
+                
+                for method in click_methods:
+                    try:
+                        method()
+                        click_successful = True
+                        self.logger.debug(f"✓ Click successful for element {index}")
+                        break
+                    except Exception as click_error:
+                        self.logger.debug(f"Click method failed: {click_error}")
+                        continue
+                
+                if click_successful:
+                    # Wait for sidebar to load and extract detailed data
+                    self._wait_for_sidebar_to_load()
+                    detailed_data = self._extract_detailed_data_from_sidebar()
+                    
+                    # If we got a name from sidebar, use it
+                    sidebar_name = self._extract_sidebar_name()
+                    if sidebar_name:
+                        business_data['name'] = sidebar_name
+                    
+                    # Merge detailed data
+                    if detailed_data:
+                        business_data.update({k: v for k, v in detailed_data.items() if v})
+                        
+            except Exception as click_error:
+                self.logger.warning(f"Could not click element {index} for detailed info: {click_error}")
+            
+            # Validation and enhancement of extracted data
+            if not business_data.get('name'):
+                # Try alternative name extraction methods
+                name_attempts = [
+                    lambda: element.get_attribute('aria-label'),
+                    lambda: element.get_attribute('title'),
+                    lambda: element.text.strip(),
+                ]
+                
+                for method in name_attempts:
+                    try:
+                        name = method()
+                        if name and len(name.strip()) > 1:
+                            business_data['name'] = name.strip()
+                            break
+                    except:
+                        continue
+            
+            # If we still don't have a name, extract from any text content
+            if not business_data.get('name'):
+                try:
+                    # Look for any text content in the element
+                    text_elements = element.find_elements(By.XPATH, ".//*[text()]")
+                    for text_elem in text_elements[:3]:  # Check first few text elements
+                        text = text_elem.text.strip()
+                        if text and len(text) > 2 and not text.isdigit():
+                            business_data['name'] = text
+                            break
+                except:
+                    pass
+            
+            # Last resort - use element attributes or create placeholder
+            if not business_data.get('name'):
+                data_cid = element.get_attribute('data-cid')
+                if data_cid:
+                    business_data['name'] = f"Business_CID_{data_cid}"
+                else:
+                    business_data['name'] = f"Business_Element_{index}"
+                self.logger.warning(f"Used fallback name for element {index}: {business_data['name']}")
+            
+            # Ensure all expected fields exist
+            expected_fields = ['rating', 'reviews_count', 'category', 'address', 'phone', 'website', 'hours', 'price_range', 'description']
+            for field in expected_fields:
+                if field not in business_data:
+                    business_data[field] = ""
+            
+            # Final validation
+            if business_data.get('name') and len(business_data['name'].strip()) > 0:
+                self.logger.debug(f"[SUCCESS] Successfully extracted data for: {business_data['name']}")
+                return business_data
+            else:
+                self.logger.warning(f"[FAIL] Failed to extract valid business data from element {index}")
+                return None
+            
+        except Exception as e:
+            self.logger.error(f"[ERROR] Error extracting business data from element {index}: {str(e)}")
+            # Return a placeholder to maintain count
+            return {
+                'index': index,
+                'name': f"Extraction_Failed_{index}",
+                'rating': '',
+                'reviews_count': '',
+                'category': '',
+                'address': '',
+                'phone': '',
+                'website': '',
+                'hours': '',
+                'price_range': '',
+                'description': f"Data extraction failed: {str(e)}"
+            }
+
+    def _wait_for_sidebar_to_load(self):
+        """Wait for the sidebar to fully load with business content."""
+        try:
+            # Wait for sidebar container to appear
+            sidebar_selectors = [
+                '[role="main"] > div:nth-child(2)',  # Main sidebar container
+                '.m6QErb[data-value]',  # Sidebar with data
+                '[data-attrid="title"]',  # Business title in sidebar
+                '.DUwDvf.lfPIob',  # Business name
+                '.fontHeadlineSmall'  # Alternative business name
+            ]
+            
+            sidebar_loaded = False
+            max_wait_time = 3.0  # Maximum 3 seconds wait
+            start_time = time.time()
+            
+            while not sidebar_loaded and (time.time() - start_time) < max_wait_time:
+                for selector in sidebar_selectors:
+                    try:
+                        element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        if element and element.is_displayed():
+                            # Additional check: make sure it has actual content
+                            if selector in ['[data-attrid="title"]', '.DUwDvf.lfPIob', '.fontHeadlineSmall']:
+                                if element.text.strip():  # Has actual text content
+                                    sidebar_loaded = True
+                                    break
+                            else:
+                                sidebar_loaded = True
+                                break
+                    except:
+                        continue
+                
+                if not sidebar_loaded:
+                    time.sleep(0.1)  # Small incremental wait
+            
+            # Additional small wait to ensure content is stable
+            time.sleep(1.3)  # As requested by user
+            
+        except Exception as e:
+            self.logger.debug(f"Error waiting for sidebar: {e}")
+            time.sleep(2)  # Fallback wait
 
     def _extract_basic_data_from_element(self, element, index: int) -> Dict:
-        """Extract basic business data directly from search result element."""
+        """Extract comprehensive business data directly from search result element with enhanced extraction."""
         try:
             business_data = {'index': index}
             
-            # Try to extract name from various selectors within the element
+            # Enhanced name extraction with more selectors and fallbacks
             name_selectors = [
                 '.fontHeadlineSmall',
                 '.DUwDvf',
@@ -513,54 +837,193 @@ Solutions to try:
                 'h3',
                 'h2',
                 '.qBF1Pd',
-                '.fontBodyMedium'
+                '.fontBodyMedium',
+                'div.fontBodyMedium > span',
+                '.section-result-title',
+                'a[data-value]'
             ]
             
+            name_found = False
             for selector in name_selectors:
                 try:
-                    name_elem = element.find_element(By.CSS_SELECTOR, selector)
-                    if name_elem and name_elem.text.strip():
-                        business_data['name'] = name_elem.text.strip()
+                    name_elements = element.find_elements(By.CSS_SELECTOR, selector)
+                    for name_elem in name_elements:
+                        if name_elem and name_elem.text.strip():
+                            text = name_elem.text.strip()
+                            # Filter out obvious non-business names
+                            if len(text) > 1 and not text.isdigit() and 'directions' not in text.lower():
+                                business_data['name'] = text
+                                name_found = True
+                                break
+                    if name_found:
                         break
                 except:
                     continue
             
-            # Try to extract rating
+            # Fallback name extraction from attributes
+            if not name_found:
+                try:
+                    aria_label = element.get_attribute('aria-label')
+                    if aria_label and len(aria_label.strip()) > 1:
+                        business_data['name'] = aria_label.strip()
+                        name_found = True
+                except:
+                    pass
+            
+            # Enhanced rating extraction with more comprehensive search
             rating_selectors = [
                 '.MW4etd',
                 '.fontBodySmall .MW4etd',
                 '[aria-label*="stars"]',
-                '.review-score'
+                '.review-score',
+                'span[aria-label*="star"]',
+                '.F7nice span',
+                '.fontBodySmall span:first-child'
             ]
             
             for selector in rating_selectors:
                 try:
-                    rating_elem = element.find_element(By.CSS_SELECTOR, selector)
-                    if rating_elem and rating_elem.text.strip():
-                        business_data['rating'] = rating_elem.text.strip()
-                        break
+                    rating_elements = element.find_elements(By.CSS_SELECTOR, selector)
+                    for rating_elem in rating_elements:
+                        text = rating_elem.text.strip() or rating_elem.get_attribute('aria-label') or ""
+                        if text:
+                            # Extract numeric rating
+                            rating_match = re.search(r'(\d+\.?\d*)', text)
+                            if rating_match:
+                                rating = rating_match.group(1)
+                                try:
+                                    rating_float = float(rating)
+                                    if 0 <= rating_float <= 5:
+                                        business_data['rating'] = rating
+                                        break
+                                except ValueError:
+                                    continue
+                except:
+                    continue
+                    
+            # Try to extract reviews count from various locations
+            reviews_selectors = [
+                'span[aria-label*="reviews"]',
+                'button[aria-label*="reviews"]',
+                '.fontBodySmall span:contains("(")',
+                '.F7nice .fontBodySmall'
+            ]
+            
+            for selector in reviews_selectors:
+                try:
+                    reviews_elements = element.find_elements(By.CSS_SELECTOR, selector)
+                    for reviews_elem in reviews_elements:
+                        text = reviews_elem.text or reviews_elem.get_attribute('aria-label') or ""
+                        if text:
+                            # Extract number from text like "(860)" or "860 reviews"
+                            count_match = re.search(r'[\(\s](\d+)[\)\s]', text)
+                            if count_match:
+                                business_data['reviews_count'] = count_match.group(1)
+                                break
+                            # Also try simple number extraction
+                            simple_match = re.search(r'(\d+)', text)
+                            if simple_match and len(simple_match.group(1)) > 1:  # At least 2 digits
+                                business_data['reviews_count'] = simple_match.group(1)
+                                break
                 except:
                     continue
             
-            # Try to extract category
+            # Enhanced category extraction
             category_selectors = [
                 '.fontBodySmall',
                 '.DkEaL',
                 '.W4Efsd:nth-child(2)',
-                '.W4Efsd'
+                '.W4Efsd',
+                'button.DkEaL',
+                '.section-result-category',
+                '.fontBodySmall:not(:has(.MW4etd))'  # Exclude elements with ratings
             ]
             
             for selector in category_selectors:
                 try:
-                    category_elem = element.find_element(By.CSS_SELECTOR, selector)
-                    if category_elem and category_elem.text.strip():
-                        # Skip if it looks like a rating
-                        text = category_elem.text.strip()
-                        if not any(char.isdigit() for char in text[:3]):  # Avoid ratings
-                            business_data['category'] = text
-                            break
+                    category_elements = element.find_elements(By.CSS_SELECTOR, selector)
+                    for category_elem in category_elements:
+                        if category_elem and category_elem.text.strip():
+                            text = category_elem.text.strip()
+                            # More sophisticated filtering
+                            if (len(text) > 2 and 
+                                not text.replace('.', '').replace(',', '').isdigit() and  # Not just numbers
+                                'directions' not in text.lower() and
+                                not re.match(r'^\d+\.\d+\s', text) and  # Not rating format
+                                not re.match(r'^\(\d+\)', text) and  # Not review count format
+                                len(text) < 100 and  # Not too long description
+                                not any(char in text for char in ['$', '$$', '$$$', '$$$$'])):  # Not price range
+                                business_data['category'] = text
+                                break
                 except:
                     continue
+            
+            # Try to extract additional info from the element's text content
+            try:
+                full_text = element.text
+                if full_text:
+                    lines = [line.strip() for line in full_text.split('\n') if line.strip()]
+                    
+                    # Process each line to extract different data types
+                    for line_idx, line in enumerate(lines):
+                        if not line:
+                            continue
+                        
+                        # Skip the business name line (usually first)
+                        if line_idx == 0 and business_data.get('name') and line in business_data['name']:
+                            continue
+                            
+                        # Look for rating patterns (e.g., "4.5", "4.5 stars")
+                        if 'rating' not in business_data or not business_data['rating']:
+                            rating_match = re.search(r'^(\d+\.?\d*)\s*(?:stars?)?$', line)
+                            if rating_match:
+                                rating = rating_match.group(1)
+                                if 0 <= float(rating) <= 5:
+                                    business_data['rating'] = rating
+                                    continue
+                        
+                        # Look for review count patterns (e.g., "(1,234)", "1,234 reviews")
+                        if 'reviews_count' not in business_data or not business_data['reviews_count']:
+                            review_match = re.search(r'[\(\s]?(\d{1,3}(?:,\d{3})*|\d+)[\)\s]?\s*(?:reviews?)?', line)
+                            if review_match and len(review_match.group(1).replace(',', '')) >= 2:  # At least 2 digits
+                                business_data['reviews_count'] = review_match.group(1).replace(',', '')
+                                continue
+                        
+                        # Look for category patterns (restaurant types, etc.)
+                        if ('category' not in business_data or not business_data['category']) and len(line) < 100:
+                            # Common restaurant/business categories
+                            category_keywords = ['restaurant', 'cafe', 'bar', 'grill', 'kitchen', 'bistro', 'steakhouse', 'diner', 'eatery', 'bakery', 'pizzeria', 'shop', 'store', 'market']
+                            if (any(keyword in line.lower() for keyword in category_keywords) or
+                                (len(line) > 5 and len(line) < 50 and 
+                                 not any(char.isdigit() for char in line) and 
+                                 not any(symbol in line for symbol in ['$', '(', ')', '•', '★']) and
+                                 'open' not in line.lower() and 'close' not in line.lower())):
+                                business_data['category'] = line
+                                continue
+                        
+                        # Look for price range indicators
+                        if ('price_range' not in business_data or not business_data['price_range']):
+                            if any(price in line for price in ['$', '$$', '$$$', '$$$$']) and len(line) < 20:
+                                business_data['price_range'] = line
+                                continue
+                        
+                        # Look for address patterns
+                        if ('address' not in business_data or not business_data['address']):
+                            if ((any(word in line.lower() for word in ['street', 'st', 'ave', 'avenue', 'road', 'rd', 'blvd', 'way', 'place', 'drive', 'dr']) or
+                                 re.search(r'\d+.*\w+.*(?:\d{5}|NY|New York)', line)) and
+                                len(line) > 15 and len(line) < 200):
+                                business_data['address'] = line
+                                continue
+                            
+                        # Look for hours
+                        if ('hours' not in business_data or not business_data['hours']):
+                            if (any(time_word in line.lower() for time_word in ['open', 'close', 'hours', 'pm', 'am']) and
+                                len(line) < 100):
+                                business_data['hours'] = line
+                                continue
+                                
+            except Exception as e:
+                self.logger.debug(f"Error parsing element text: {e}")
             
             return business_data
             
