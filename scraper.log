@@ -1,0 +1,601 @@
+2025-08-01 19:18:14,372 - INFO - Setting up ChromeDriver...
+2025-08-01 19:18:14,372 - INFO - ====== WebDriver manager ======
+2025-08-01 19:18:14,372 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay/.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 19:18:15,547 - INFO - ChromeDriver setup successful
+2025-08-01 19:18:15,547 - INFO - Searching for: coffee shop Seattle
+2025-08-01 19:19:24,886 - ERROR - Timeout waiting for search results
+2025-08-01 19:19:26,086 - INFO - WebDriver closed
+2025-08-01 19:20:48,345 - INFO - Setting up ChromeDriver...
+2025-08-01 19:20:48,345 - INFO - ====== WebDriver manager ======
+2025-08-01 19:20:48,346 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay/.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 19:20:49,318 - INFO - ChromeDriver setup successful
+2025-08-01 19:20:49,318 - INFO - Searching for: coffee shop Seattle
+2025-08-01 19:21:07,102 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:21:07,120 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5ea85e]
+	(No symbol) [0x0x5eabfb]
+	(No symbol) [0x0x632f92]
+	(No symbol) [0x0x60f3f4]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 19:21:07,138 - INFO - Found 8 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:21:07,158 - INFO - Found 8 elements with selector: .hfpxzc
+2025-08-01 19:21:07,590 - INFO - Extracted 8 unique business links
+2025-08-01 19:21:07,590 - INFO - Found 8 business links
+2025-08-01 19:21:15,044 - INFO - Scraped business 1: 
+2025-08-01 19:21:21,246 - INFO - Scraped business 2: 
+2025-08-01 19:21:27,288 - INFO - Scraped business 3: 
+2025-08-01 19:21:30,490 - INFO - WebDriver closed
+2025-08-01 19:24:35,960 - INFO - Setting up ChromeDriver...
+2025-08-01 19:24:35,960 - INFO - ====== WebDriver manager ======
+2025-08-01 19:24:35,960 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay/.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 19:24:36,922 - INFO - ChromeDriver setup successful
+2025-08-01 19:24:36,923 - INFO - Searching for: coffee shop Seattle
+2025-08-01 19:24:52,177 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:24:52,189 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5ea85e]
+	(No symbol) [0x0x5eabfb]
+	(No symbol) [0x0x632f92]
+	(No symbol) [0x0x60f3f4]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 19:24:52,202 - INFO - Found 8 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:24:52,214 - INFO - Found 8 elements with selector: .hfpxzc
+2025-08-01 19:24:52,407 - INFO - Extracted 8 unique business links
+2025-08-01 19:24:52,407 - INFO - Found 8 business links
+2025-08-01 19:24:59,655 - INFO - Scraped business 1: 
+2025-08-01 19:25:05,950 - INFO - Scraped business 2: 
+2025-08-01 19:25:12,064 - INFO - Scraped business 3: 
+2025-08-01 19:25:15,314 - INFO - WebDriver closed
+2025-08-01 19:25:33,347 - INFO - Setting up ChromeDriver...
+2025-08-01 19:25:33,347 - INFO - ====== WebDriver manager ======
+2025-08-01 19:25:34,583 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:25:35,318 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:25:36,037 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 19:25:36,038 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 19:25:36,039 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 19:25:36,039 - INFO - Trying to find existing ChromeDriver...
+2025-08-01 19:25:36,039 - ERROR - Could not find existing ChromeDriver: No existing ChromeDriver found
+2025-08-01 19:25:36,040 - INFO - Trying ChromeDriver from system PATH...
+2025-08-01 19:25:37,383 - INFO - Searching for: coffee shop Seattle
+2025-08-01 19:25:53,186 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:25:53,197 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 19:25:53,212 - INFO - Found 5 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:25:53,228 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 19:25:53,387 - INFO - Extracted 5 unique business links
+2025-08-01 19:25:53,387 - INFO - Found 5 business links
+2025-08-01 19:25:59,687 - INFO - Scraped business 1: 
+2025-08-01 19:26:06,094 - INFO - Scraped business 2: 
+2025-08-01 19:26:12,295 - INFO - Scraped business 3: 
+2025-08-01 19:26:18,395 - INFO - Scraped business 4: 
+2025-08-01 19:26:24,475 - INFO - Scraped business 5: 
+2025-08-01 19:26:26,496 - INFO - Saved 5 businesses to demo_results.csv
+2025-08-01 19:26:26,497 - INFO - Saved 5 businesses to demo_results.json
+2025-08-01 19:26:27,694 - INFO - WebDriver closed
+2025-08-01 19:27:12,773 - INFO - Setting up ChromeDriver...
+2025-08-01 19:27:12,774 - INFO - ====== WebDriver manager ======
+2025-08-01 19:27:13,810 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:27:14,525 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:27:15,245 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 19:27:15,246 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 19:27:15,248 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 19:27:15,248 - INFO - Trying to find existing ChromeDriver...
+2025-08-01 19:27:15,248 - ERROR - Could not find existing ChromeDriver: No existing ChromeDriver found
+2025-08-01 19:27:15,248 - INFO - Trying ChromeDriver from system PATH...
+2025-08-01 19:27:16,470 - INFO - Searching for: restaurants New York
+2025-08-01 19:27:32,079 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:27:32,137 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 19:27:32,185 - INFO - Found 5 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:27:32,217 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 19:27:32,816 - INFO - Extracted 5 unique business links
+2025-08-01 19:27:32,817 - INFO - Found 5 business links
+2025-08-01 19:27:39,759 - INFO - Scraped business 1: 
+2025-08-01 19:27:46,655 - INFO - Scraped business 2: 
+2025-08-01 19:27:52,741 - INFO - Scraped business 3: 
+2025-08-01 19:27:58,966 - INFO - Scraped business 4: 
+2025-08-01 19:28:05,106 - INFO - Scraped business 5: 
+2025-08-01 19:28:07,118 - INFO - Searching for: coffee shops San Francisco
+2025-08-01 19:28:16,253 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:28:16,266 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 19:28:16,278 - INFO - Found 10 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:28:16,293 - INFO - Found 10 elements with selector: .hfpxzc
+2025-08-01 19:28:16,499 - INFO - Extracted 10 unique business links
+2025-08-01 19:28:16,499 - INFO - Found 10 business links
+2025-08-01 19:28:20,539 - INFO - Scraped business 1: 
+2025-08-01 19:28:26,572 - INFO - Scraped business 2: 
+2025-08-01 19:28:32,689 - INFO - Scraped business 3: 
+2025-08-01 19:28:39,012 - INFO - Scraped business 4: 
+2025-08-01 19:28:45,100 - INFO - Scraped business 5: 
+2025-08-01 19:28:47,117 - INFO - Searching for: dentist Los Angeles
+2025-08-01 19:28:55,516 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:28:55,526 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 19:28:55,538 - INFO - Found 5 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:28:55,549 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 19:28:55,668 - INFO - Extracted 5 unique business links
+2025-08-01 19:28:55,668 - INFO - Found 5 business links
+2025-08-01 19:28:59,756 - INFO - Scraped business 1: 
+2025-08-01 19:29:05,559 - INFO - Scraped business 2: 
+2025-08-01 19:29:11,666 - INFO - Scraped business 3: 
+2025-08-01 19:29:17,776 - INFO - Scraped business 4: 
+2025-08-01 19:29:24,037 - INFO - Scraped business 5: 
+2025-08-01 19:29:26,045 - INFO - Saved 15 businesses to google_businesses.csv
+2025-08-01 19:29:26,047 - INFO - Saved 15 businesses to google_businesses.json
+2025-08-01 19:29:27,321 - INFO - WebDriver closed
+2025-08-01 19:55:20,825 - INFO - Setting up ChromeDriver...
+2025-08-01 19:55:20,826 - INFO - ====== WebDriver manager ======
+2025-08-01 19:55:21,871 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:55:22,868 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:55:23,579 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 19:55:23,580 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 19:55:23,581 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 19:55:23,581 - INFO - Trying to find existing ChromeDriver...
+2025-08-01 19:55:23,582 - ERROR - Could not find existing ChromeDriver: No existing ChromeDriver found
+2025-08-01 19:55:23,582 - INFO - Trying ChromeDriver from system PATH...
+2025-08-01 19:55:27,298 - INFO - Searching for: Starbucks New York
+2025-08-01 19:55:39,003 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:55:39,015 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 19:55:39,028 - INFO - Found 8 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:55:39,070 - INFO - Found 8 elements with selector: .hfpxzc
+2025-08-01 19:55:39,246 - INFO - Extracted 8 unique business links
+2025-08-01 19:55:39,247 - INFO - Found 8 business links
+2025-08-01 19:55:45,415 - INFO - Scraped business 1: 
+2025-08-01 19:55:48,617 - INFO - WebDriver closed
+2025-08-01 19:56:24,020 - INFO - Setting up ChromeDriver...
+2025-08-01 19:56:24,020 - INFO - ====== WebDriver manager ======
+2025-08-01 19:56:25,083 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:56:25,812 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:56:26,550 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 19:56:26,550 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 19:56:26,552 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 19:56:26,553 - INFO - Trying to find existing ChromeDriver...
+2025-08-01 19:56:26,553 - ERROR - Could not find existing ChromeDriver: No existing ChromeDriver found
+2025-08-01 19:56:26,553 - INFO - Trying ChromeDriver from system PATH...
+2025-08-01 19:57:20,753 - INFO - WebDriver closed
+2025-08-01 19:57:50,657 - INFO - Setting up ChromeDriver...
+2025-08-01 19:57:50,657 - INFO - ====== WebDriver manager ======
+2025-08-01 19:57:51,662 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:57:52,394 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 19:57:53,128 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 19:57:53,128 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 19:57:53,129 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 19:57:53,129 - INFO - Trying to find existing ChromeDriver...
+2025-08-01 19:57:53,130 - ERROR - Could not find existing ChromeDriver: No existing ChromeDriver found
+2025-08-01 19:57:53,130 - INFO - Trying ChromeDriver from system PATH...
+2025-08-01 19:57:54,359 - INFO - Searching for: coffee shops New York
+2025-08-01 19:58:05,239 - INFO - Found results container with selector: [role="main"]
+2025-08-01 19:58:05,254 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 19:58:05,266 - INFO - Found 5 elements with selector: a[href*="/maps/place/"]
+2025-08-01 19:58:05,279 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 19:58:05,420 - INFO - Extracted 5 unique business links
+2025-08-01 19:58:05,420 - INFO - Found 5 business links
+2025-08-01 19:58:11,527 - INFO - Scraped business 1: 
+2025-08-01 19:58:18,139 - INFO - Scraped business 2: Gumption Coffee
+2025-08-01 19:58:24,433 - INFO - Scraped business 3: La Cabra Bakery
+2025-08-01 19:58:31,026 - INFO - Scraped business 4: 
+2025-08-01 19:58:37,438 - INFO - Scraped business 5: Suited NYC
+2025-08-01 19:58:39,458 - INFO - Saved 5 businesses to coffee_shops_New_York_demo.csv
+2025-08-01 19:58:39,460 - INFO - Saved 5 businesses to coffee_shops_New_York_demo.json
+2025-08-01 19:58:40,674 - INFO - WebDriver closed
+2025-08-01 19:59:58,758 - INFO - Setting up ChromeDriver...
+2025-08-01 19:59:58,759 - INFO - ====== WebDriver manager ======
+2025-08-01 19:59:59,761 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:00:00,489 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:00:02,237 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:00:02,238 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 20:00:02,247 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 20:00:02,248 - INFO - Trying to find existing ChromeDriver...
+2025-08-01 20:00:02,249 - ERROR - Could not find existing ChromeDriver: No existing ChromeDriver found
+2025-08-01 20:00:02,249 - INFO - Trying ChromeDriver from system PATH...
+2025-08-01 20:00:03,424 - INFO - Searching for: restaurants New York
+2025-08-01 20:00:14,643 - INFO - Found results container with selector: [role="main"]
+2025-08-01 20:00:14,662 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff639e8e415+77285]
+	GetHandleVerifier [0x0x7ff639e8e470+77376]
+	(No symbol) [0x0x7ff639c59a6a]
+	(No symbol) [0x0x7ff639cb0406]
+	(No symbol) [0x0x7ff639cb06bc]
+	(No symbol) [0x0x7ff639d03ac7]
+	(No symbol) [0x0x7ff639cd864f]
+	(No symbol) [0x0x7ff639d0087f]
+	(No symbol) [0x0x7ff639cd83e3]
+	(No symbol) [0x0x7ff639ca1521]
+	(No symbol) [0x0x7ff639ca22b3]
+	GetHandleVerifier [0x0x7ff63a171efd+3107021]
+	GetHandleVerifier [0x0x7ff63a16c29d+3083373]
+	GetHandleVerifier [0x0x7ff63a18bedd+3213485]
+	GetHandleVerifier [0x0x7ff639ea884e+184862]
+	GetHandleVerifier [0x0x7ff639eb055f+216879]
+	GetHandleVerifier [0x0x7ff639e97084+113236]
+	GetHandleVerifier [0x0x7ff639e97239+113673]
+	GetHandleVerifier [0x0x7ff639e7e298+11368]
+	BaseThreadInitThunk [0x0x7fff8efee8d7+23]
+	RtlUserThreadStart [0x0x7fff911bc34c+44]
+
+2025-08-01 20:00:14,680 - INFO - Found 5 elements with selector: a[href*="/maps/place/"]
+2025-08-01 20:00:14,693 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 20:00:14,842 - INFO - Extracted 5 unique business links
+2025-08-01 20:00:14,842 - INFO - Found 5 business links
+2025-08-01 20:00:20,942 - INFO - Scraped business 1: Results
+2025-08-01 20:00:29,518 - INFO - Scraped business 2: The Dynamo Room
+2025-08-01 20:00:34,957 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/51e745ba0f9c359e4bd3919b204e10a0
+2025-08-01 20:00:37,015 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023E8E4E2950>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/51e745ba0f9c359e4bd3919b204e10a0
+2025-08-01 20:00:39,063 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023E8E4E20E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/51e745ba0f9c359e4bd3919b204e10a0
+2025-08-01 20:00:43,159 - INFO - WebDriver closed
+2025-08-01 20:32:43,435 - INFO - Setting up ChromeDriver...
+2025-08-01 20:32:43,435 - INFO - ====== WebDriver manager ======
+2025-08-01 20:32:44,561 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:32:45,358 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:32:46,594 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:32:46,595 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 20:32:46,603 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 20:33:22,035 - INFO - Setting up ChromeDriver...
+2025-08-01 20:33:22,036 - INFO - ====== WebDriver manager ======
+2025-08-01 20:33:23,024 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:33:23,763 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:33:24,491 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:33:24,492 - INFO - ChromeDriver installed at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-08-01 20:33:24,494 - ERROR - Error setting up ChromeDriver: [WinError 193] %1 is not a valid Win32 application
+2025-08-01 20:38:59,481 - INFO - Setting up ChromeDriver...
+2025-08-01 20:38:59,483 - INFO - ====== WebDriver manager ======
+2025-08-01 20:39:00,464 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:39:01,212 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:39:01,938 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:39:01,942 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 20:39:02,921 - INFO - ChromeDriver setup successful
+2025-08-01 20:39:02,922 - INFO - Searching for: coffee shops New York
+2025-08-01 20:39:17,374 - INFO - Found results container with selector: [role="main"]
+2025-08-01 20:39:17,387 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5ea85e]
+	(No symbol) [0x0x5eabfb]
+	(No symbol) [0x0x632f92]
+	(No symbol) [0x0x60f3f4]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 20:39:17,398 - INFO - Found 8 elements with selector: .hfpxzc
+2025-08-01 20:39:17,478 - INFO - Processing 0 unique business elements
+2025-08-01 20:39:17,478 - INFO - Successfully scraped 0 businesses
+2025-08-01 20:39:18,593 - INFO - WebDriver closed
+2025-08-01 20:41:46,956 - INFO - Setting up ChromeDriver...
+2025-08-01 20:41:46,957 - INFO - ====== WebDriver manager ======
+2025-08-01 20:41:47,931 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:41:48,735 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:41:49,502 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:41:49,507 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 20:41:50,623 - INFO - ChromeDriver setup successful
+2025-08-01 20:41:50,628 - INFO - Searching for: coffee shops New York
+2025-08-01 20:41:50,631 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-01 20:42:42,041 - INFO - Found results container with selector: [role="main"]
+2025-08-01 20:42:42,057 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5ea85e]
+	(No symbol) [0x0x5eabfb]
+	(No symbol) [0x0x632f92]
+	(No symbol) [0x0x60f3f4]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 20:42:42,081 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 20:42:42,130 - INFO - Processing 0 unique business elements
+2025-08-01 20:42:42,130 - INFO - Successfully scraped 0 businesses
+2025-08-01 20:42:43,296 - INFO - WebDriver closed
+2025-08-01 20:44:27,147 - INFO - Setting up ChromeDriver...
+2025-08-01 20:44:27,148 - INFO - ====== WebDriver manager ======
+2025-08-01 20:44:28,150 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:44:30,097 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:44:31,099 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:44:31,102 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 20:44:32,232 - INFO - ChromeDriver setup successful
+2025-08-01 20:44:32,233 - INFO - Searching for: restaurants New York
+2025-08-01 20:44:32,234 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-01 20:45:13,951 - INFO - Found results container with selector: [role="main"]
+2025-08-01 20:45:13,963 - WARNING - Error scrolling results: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value="Search results"]"}
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5ea85e]
+	(No symbol) [0x0x5eabfb]
+	(No symbol) [0x0x632f92]
+	(No symbol) [0x0x60f3f4]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 20:45:13,987 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 20:45:14,155 - INFO - Processing 5 unique business elements
+2025-08-01 20:45:19,767 - INFO - Extracted business 1: Gramercy Tavern
+2025-08-01 20:45:24,696 - INFO - Extracted business 2: Boucherie West Village
+2025-08-01 20:45:29,563 - INFO - Extracted business 3: Balthazar
+2025-08-01 20:45:34,348 - INFO - Extracted business 4: Russ & Daughters Cafe
+2025-08-01 20:45:39,399 - INFO - Extracted business 5: Manhatta
+2025-08-01 20:45:39,399 - INFO - Successfully scraped 5 businesses
+2025-08-01 20:45:39,404 - INFO - Saved 5 businesses to restaurants_New_York_1754063139.csv
+2025-08-01 20:45:39,405 - INFO - Saved 5 businesses to restaurants_New_York_1754063139.json
+2025-08-01 20:45:40,773 - INFO - WebDriver closed
+2025-08-01 20:46:36,778 - INFO - Setting up ChromeDriver...
+2025-08-01 20:46:36,779 - INFO - ====== WebDriver manager ======
+2025-08-01 20:46:37,808 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:46:38,542 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:46:39,265 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:46:39,269 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 20:46:40,331 - INFO - ChromeDriver setup successful
+2025-08-01 20:46:40,331 - INFO - Searching for: coffee shops New York
+2025-08-01 20:46:40,332 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-01 20:46:51,525 - INFO - Found results container with selector: [role="main"]
+2025-08-01 20:46:51,536 - INFO - Found scrollable panel with selector: [role="main"]
+2025-08-01 20:46:51,544 - INFO - Starting endless scrolling to load all businesses...
+2025-08-01 20:46:55,567 - INFO -    No new content loaded (attempt 1/3)
+2025-08-01 20:46:59,595 - INFO -    No new content loaded (attempt 2/3)
+2025-08-01 20:47:03,635 - INFO -    No new content loaded (attempt 3/3)
+2025-08-01 20:47:03,635 - INFO - Scrolling completed after 0 scrolls
+2025-08-01 20:47:03,669 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 20:47:03,815 - INFO - Processing 5 unique business elements
+2025-08-01 20:47:08,844 - INFO - Extracted business 1: Coffee Project New York | East Village
+2025-08-01 20:47:13,649 - INFO - Extracted business 2: Gumption Coffee
+2025-08-01 20:47:18,456 - INFO - Extracted business 3: La Cabra Bakery
+2025-08-01 20:47:23,300 - INFO - Extracted business 4: Stumptown Coffee Roasters
+2025-08-01 20:47:28,157 - INFO - Extracted business 5: Suited NYC
+2025-08-01 20:47:28,157 - INFO - Successfully scraped 5 businesses
+2025-08-01 20:47:28,163 - INFO - Saved 5 businesses to coffee_shops_New_York_1754063248.csv
+2025-08-01 20:47:28,164 - INFO - Saved 5 businesses to coffee_shops_New_York_1754063248.json
+2025-08-01 20:47:29,514 - INFO - WebDriver closed
+2025-08-01 20:48:41,985 - INFO - Setting up ChromeDriver...
+2025-08-01 20:48:41,985 - INFO - ====== WebDriver manager ======
+2025-08-01 20:48:42,971 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:48:43,707 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 20:48:44,430 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 20:48:44,432 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 20:48:45,598 - INFO - ChromeDriver setup successful
+2025-08-01 20:48:45,599 - INFO - Searching for: dentist New York
+2025-08-01 20:48:45,599 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-01 20:49:01,484 - INFO - Found results container with selector: [role="main"]
+2025-08-01 20:49:01,494 - INFO - Found scrollable panel with selector: [role="main"]
+2025-08-01 20:49:01,502 - INFO - Starting endless scrolling to load all businesses...
+2025-08-01 20:49:05,540 - INFO -    No new businesses loaded (attempt 1/3)
+2025-08-01 20:49:09,583 - INFO -    No new businesses loaded (attempt 2/3)
+2025-08-01 20:49:13,626 - INFO -    No new businesses loaded (attempt 3/3)
+2025-08-01 20:49:13,627 - INFO - Scrolling completed after 3 scrolls
+2025-08-01 20:49:13,660 - INFO - Found 5 elements with selector: .hfpxzc
+2025-08-01 20:49:13,807 - INFO - Processing 5 unique business elements
+2025-08-01 20:49:18,712 - INFO - Extracted business 1: The New York Center for Cosmetic Dentistry
+2025-08-01 20:49:23,529 - INFO - Extracted business 2: drjonslaughter.com
+2025-08-01 20:49:28,316 - INFO - Extracted business 3: 209 NYC Dental
+2025-08-01 20:49:33,062 - INFO - Extracted business 4: NYC Smile Spa
+2025-08-01 20:49:37,786 - INFO - Extracted business 5: Midtown Dental Group Fashion District
+2025-08-01 20:49:37,787 - INFO - Successfully scraped 5 businesses
+2025-08-01 20:49:37,792 - INFO - Saved 5 businesses to dentist_New_York_1754063377.csv
+2025-08-01 20:49:37,793 - INFO - Saved 5 businesses to dentist_New_York_1754063377.json
+2025-08-01 20:49:39,136 - INFO - WebDriver closed
