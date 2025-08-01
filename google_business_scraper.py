@@ -419,7 +419,7 @@ Solutions to try:
                             # Check for duplicates
                             if business_name and business_name not in seen_business_names:
                                 
-                                # Try to get additional data by clicking (with proper timing)
+                                # Try to get additional data by clicking (with extended timing for complete data loading)
                                 try:
                                     # Scroll element into view
                                     self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
@@ -427,18 +427,18 @@ Solutions to try:
                                     
                                     # Try clicking for detailed info
                                     element.click()
-                                    time.sleep(2.0)  # Wait 2 seconds as requested by user
+                                    time.sleep(5.0)  # Wait 5 seconds as requested by user for complete popup loading
                                     
-                                    # Wait for sidebar content to fully load
+                                    # Wait for sidebar content to fully load with extended timeout
                                     try:
                                         # Wait for sidebar to be present and stable
-                                        WebDriverWait(self.driver, 3).until(
+                                        WebDriverWait(self.driver, 5).until(
                                             EC.presence_of_element_located((By.CSS_SELECTOR, "[data-value='Directions'], .TIHn2, .m6QErb"))
                                         )
-                                        time.sleep(1.0)  # Additional wait for all content to render
+                                        time.sleep(2.0)  # Extended wait for all content to render completely
                                     except TimeoutException:
-                                        # If sidebar doesn't load normally, still wait minimum time
-                                        time.sleep(1.0)
+                                        # If sidebar doesn't load normally, still wait extended time
+                                        time.sleep(3.0)
                                     
                                     # Try to extract additional data from sidebar
                                     detailed_data = self._extract_quick_sidebar_data()
@@ -488,12 +488,12 @@ Solutions to try:
         return businesses
     
     def _extract_quick_sidebar_data(self) -> Optional[Dict]:
-        """Extract comprehensive data from sidebar with proper wait for complete loading."""
+        """Extract comprehensive data from sidebar with extended wait for complete loading."""
         try:
             data = {}
             
-            # Wait a bit more for sidebar content to stabilize
-            time.sleep(0.5)
+            # Extended wait for sidebar content to stabilize completely
+            time.sleep(1.0)  # Additional stabilization time
             
             # Quick rating extraction with multiple selectors
             try:
@@ -501,7 +501,8 @@ Solutions to try:
                     '.F7nice span[aria-label*="stars"]',
                     '.F7nice .fontBodyMedium',
                     '[data-value] span',
-                    '.aMPvhf-fI6EEc-KVuj8d'
+                    '.aMPvhf-fI6EEc-KVuj8d',
+                    'span[role="img"][aria-label*="stars"]'
                 ]
                 
                 for selector in rating_selectors:
@@ -519,22 +520,24 @@ Solutions to try:
             except:
                 pass
             
-            # Quick reviews count extraction with better parsing
+            # Enhanced reviews count extraction with better parsing
             try:
                 reviews_selectors = [
                     '.F7nice span[aria-label*="reviews"]',
                     '.F7nice span[aria-label*="review"]',
-                    '.UY7F9'
+                    '.UY7F9',
+                    'button[aria-label*="reviews"]',
+                    'span[aria-label*="review"]'
                 ]
                 
                 for selector in reviews_selectors:
                     try:
                         reviews_element = self.driver.find_element(By.CSS_SELECTOR, selector)
                         reviews_text = reviews_element.text or reviews_element.get_attribute('aria-label') or ""
-                        # Look for numbers in parentheses or standalone numbers
-                        count_match = re.search(r'[\(\s](\d+,?\d*)[\)\s]|(\d+,?\d+)\s*review', reviews_text)
+                        # Look for numbers in parentheses, standalone numbers, or comma-separated numbers
+                        count_match = re.search(r'[\(\s](\d+,?\d*)[\)\s]|(\d+,?\d+)\s*review|(\d+,?\d+)', reviews_text)
                         if count_match:
-                            count = count_match.group(1) or count_match.group(2)
+                            count = count_match.group(1) or count_match.group(2) or count_match.group(3)
                             data['reviews_count'] = count.replace(',', '')
                             break
                     except:
@@ -542,14 +545,16 @@ Solutions to try:
             except:
                 pass
             
-            # Enhanced category extraction with multiple approaches
+            # Enhanced category extraction with comprehensive approaches
             try:
                 category_selectors = [
                     'button[jsaction*="category"]',
                     '.DkEaL',
                     'button.DkEaL',
                     '.LBgpqf',
-                    '[data-value="Categories"] + div'
+                    '[data-value="Categories"] + div',
+                    'button[data-value*="category"]',
+                    '.skqShb'
                 ]
                 
                 for selector in category_selectors:
@@ -562,29 +567,36 @@ Solutions to try:
                     except:
                         continue
                         
-                # If no category found via selectors, try text parsing
+                # Enhanced text parsing with longer wait time benefits
                 if 'category' not in data:
                     try:
-                        page_text = self.driver.find_element(By.TAG_NAME, 'body').text
-                        lines = page_text.split('\n')
-                        for line in lines[:20]:  # Check first 20 lines
-                            line = line.strip()
-                            if any(cat_word in line.lower() for cat_word in ['restaurant', 'cafe', 'bar', 'grill', 'kitchen', 'diner', 'bistro']):
-                                if len(line) < 50 and line not in ['Restaurant', 'Restaurants']:
-                                    data['category'] = line
-                                    break
+                        # Look for category patterns in the sidebar area specifically
+                        sidebar_elements = self.driver.find_elements(By.CSS_SELECTOR, '.TIHn2, .m6QErb, [role="main"]')
+                        for sidebar in sidebar_elements:
+                            text_content = sidebar.text
+                            lines = text_content.split('\n')
+                            for line in lines[:30]:  # Check more lines with extended time
+                                line = line.strip()
+                                if any(cat_word in line.lower() for cat_word in ['restaurant', 'cafe', 'bar', 'grill', 'kitchen', 'diner', 'bistro', 'steakhouse', 'pizzeria', 'bakery']):
+                                    if len(line) < 50 and line not in ['Restaurant', 'Restaurants'] and '·' not in line:
+                                        data['category'] = line
+                                        break
+                            if 'category' in data:
+                                break
                     except:
                         pass
             except:
                 pass
             
-            # Enhanced address extraction
+            # Enhanced address extraction with more comprehensive selectors
             try:
                 address_selectors = [
                     'button[data-item-id="address"] .Io6YTe',
                     'button[aria-label*="Address"]',
                     '.Io6YTe',
-                    '.LrzXr'
+                    '.LrzXr',
+                    'button[data-item-id="address"]',
+                    '[data-item-id="address"]'
                 ]
                 
                 for selector in address_selectors:
@@ -597,7 +609,7 @@ Solutions to try:
                                 if len(address_clean) > 10:
                                     data['address'] = address_clean
                                     break
-                            elif any(addr_word in address_text.lower() for addr_word in ['street', 'st ', ' st', 'ave', 'avenue', 'ny ', 'new york']) and len(address_text) > 10:
+                            elif any(addr_word in address_text.lower() for addr_word in ['street', 'st ', ' st', 'ave', 'avenue', 'ny ', 'new york', 'broadway', 'road', 'rd']) and len(address_text) > 10:
                                 data['address'] = address_text
                                 break
                     except:
@@ -605,12 +617,14 @@ Solutions to try:
             except:
                 pass
             
-            # Enhanced phone extraction
+            # Enhanced phone extraction with extended selectors
             try:
                 phone_selectors = [
                     'button[data-item-id*="phone"] .Io6YTe',
                     'button[aria-label*="Phone"]',
-                    'button[aria-label*="Call"]'
+                    'button[aria-label*="Call"]',
+                    '[data-item-id="phone"]',
+                    'button[data-item-id="phone"]'
                 ]
                 
                 for selector in phone_selectors:
@@ -631,21 +645,45 @@ Solutions to try:
             except:
                 pass
             
-            # Website extraction
+            # Enhanced website extraction
             try:
                 website_selectors = [
                     'button[data-item-id*="website"] .Io6YTe',
                     'button[aria-label*="Website"]',
-                    'a[href*="http"]'
+                    'a[href*="http"]',
+                    '[data-item-id="website"]',
+                    'button[data-item-id="website"]'
                 ]
                 
                 for selector in website_selectors:
                     try:
                         website_element = self.driver.find_element(By.CSS_SELECTOR, selector)
                         website_text = website_element.text.strip() or website_element.get_attribute('href')
-                        if website_text and ('http' in website_text or '.com' in website_text):
+                        if website_text and ('http' in website_text or '.com' in website_text or '.org' in website_text):
                             data['website'] = website_text
                             break
+                    except:
+                        continue
+            except:
+                pass
+            
+            # Enhanced hours extraction with extended wait benefits
+            try:
+                hours_selectors = [
+                    'button[data-item-id*="hours"]',
+                    'button[aria-label*="Hours"]',
+                    '[data-item-id="hours"]',
+                    '.t39EBf'
+                ]
+                
+                for selector in hours_selectors:
+                    try:
+                        hours_element = self.driver.find_element(By.CSS_SELECTOR, selector)
+                        hours_text = hours_element.text.strip() or hours_element.get_attribute('aria-label')
+                        if hours_text and any(time_word in hours_text.lower() for time_word in ['am', 'pm', 'open', 'closed', 'hours']):
+                            if len(hours_text) < 200:  # Reasonable hours length
+                                data['hours'] = hours_text
+                                break
                     except:
                         continue
             except:
