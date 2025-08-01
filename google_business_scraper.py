@@ -282,6 +282,54 @@ Solutions to try:
                 except:
                     pass
                 
+                # Check for "end of list" message to stop scraping
+                try:
+                    end_of_list_messages = [
+                        "You've reached the end of the list.",
+                        "You've reached the end",
+                        "No more results",
+                        "End of results",
+                        "That's all we found",
+                        "No more places to show"
+                    ]
+                    
+                    # Check for end of list indicators
+                    page_text = self.driver.page_source.lower()
+                    for end_message in end_of_list_messages:
+                        if end_message.lower() in page_text:
+                            self.logger.info(f"Found end of list message: '{end_message}' - Stopping scraping")
+                            final_count = len(self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc'))
+                            self.logger.info(f"Scraping completed successfully. Total businesses found: {final_count}")
+                            return
+                    
+                    # Also check for visible end-of-list elements
+                    end_selectors = [
+                        '[data-value*="end"]',
+                        '[aria-label*="end"]',
+                        '.section-no-result',
+                        '.no-more-results',
+                        '*:contains("end of the list")',
+                        '*:contains("no more results")'
+                    ]
+                    
+                    for selector in end_selectors:
+                        try:
+                            end_elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                            for element in end_elements:
+                                if element.is_displayed() and element.text:
+                                    element_text = element.text.lower()
+                                    for end_message in end_of_list_messages:
+                                        if end_message.lower() in element_text:
+                                            self.logger.info(f"Found end of list element: '{element.text}' - Stopping scraping")
+                                            final_count = len(self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc'))
+                                            self.logger.info(f"Scraping completed successfully. Total businesses found: {final_count}")
+                                            return
+                        except:
+                            continue
+                            
+                except Exception as e:
+                    self.logger.debug(f"Error checking for end of list: {e}")
+                
                 # Count business elements after scrolling
                 new_businesses = self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc')
                 new_count = len(new_businesses)
@@ -296,6 +344,24 @@ Solutions to try:
                 else:
                     consecutive_no_change += 1
                     self.logger.info(f"   Scroll {scrolls}: No new businesses loaded (attempt {consecutive_no_change}/{max_consecutive_no_change})")
+                    
+                    # If we've had several attempts with no new results, check if we've reached the end
+                    if consecutive_no_change >= 3:
+                        self.logger.info("Multiple attempts with no new results - checking if we've reached the end...")
+                        # Additional check for end-of-list indicators when no new results
+                        try:
+                            # Check if there are any "Show more" buttons still available
+                            more_buttons = self.driver.find_elements(By.CSS_SELECTOR, 'button[data-value="See more results"]')
+                            available_buttons = [btn for btn in more_buttons if btn.is_displayed() and btn.is_enabled()]
+                            
+                            if not available_buttons:
+                                self.logger.info("No more 'Show more results' buttons available - reached end of results")
+                                final_count = len(self.driver.find_elements(By.CSS_SELECTOR, '.hfpxzc'))
+                                self.logger.info(f"Scraping completed successfully. Total businesses found: {final_count}")
+                                break
+                                
+                        except Exception as e:
+                            self.logger.debug(f"Error checking for available buttons: {e}")
                 
                 # Safety check - prevent infinite scrolling
                 if scrolls > 50:

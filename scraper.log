@@ -676,3 +676,286 @@ Stacktrace:
 2025-08-01 21:03:54,163 - INFO -    Scroll 4: Found 5 new businesses (total: 25)
 2025-08-01 21:04:05,802 - INFO - Clicked 'Show more results' button
 2025-08-01 21:04:08,827 - INFO -    Scroll 5: Found 5 new businesses (total: 30)
+2025-08-01 21:04:20,486 - INFO - Clicked 'Show more results' button
+2025-08-01 21:04:23,512 - INFO -    Scroll 6: Found 5 new businesses (total: 35)
+2025-08-01 21:04:35,075 - INFO - Clicked 'Show more results' button
+2025-08-01 21:04:38,100 - INFO -    Scroll 7: Found 5 new businesses (total: 40)
+2025-08-01 21:04:49,834 - INFO - Clicked 'Show more results' button
+2025-08-01 21:04:52,862 - INFO -    Scroll 8: Found 2 new businesses (total: 42)
+2025-08-01 21:05:04,575 - INFO - Clicked 'Show more results' button
+2025-08-01 21:05:07,606 - INFO -    Scroll 9: Found 5 new businesses (total: 47)
+2025-08-01 21:05:19,254 - INFO - Clicked 'Show more results' button
+2025-08-01 21:05:22,289 - INFO -    Scroll 10: Found 5 new businesses (total: 52)
+2025-08-01 21:05:33,935 - INFO - Clicked 'Show more results' button
+2025-08-01 21:05:36,958 - INFO -    Scroll 11: Found 5 new businesses (total: 57)
+2025-08-01 21:05:48,691 - INFO - Clicked 'Show more results' button
+2025-08-01 21:05:51,740 - INFO -    Scroll 12: Found 6 new businesses (total: 63)
+2025-08-01 21:06:03,095 - INFO - Clicked 'Show more results' button
+2025-08-01 21:06:06,126 - INFO -    Scroll 13: No new businesses loaded (attempt 1/8)
+2025-08-01 21:06:17,761 - INFO - Clicked 'Show more results' button
+2025-08-01 21:06:20,795 - INFO -    Scroll 14: Found 15 new businesses (total: 77)
+2025-08-01 21:06:32,321 - INFO - Clicked 'Show more results' button
+2025-08-01 21:06:35,362 - INFO -    Scroll 15: Found 5 new businesses (total: 82)
+2025-08-01 21:06:46,814 - INFO - Clicked 'Show more results' button
+2025-08-01 21:06:49,856 - INFO -    Scroll 16: Found 5 new businesses (total: 87)
+2025-08-01 21:07:01,480 - INFO - Clicked 'Show more results' button
+2025-08-01 21:07:04,518 - INFO -    Scroll 17: Found 5 new businesses (total: 92)
+2025-08-01 21:07:16,050 - INFO - Clicked 'Show more results' button
+2025-08-01 21:07:19,095 - INFO -    Scroll 18: Found 5 new businesses (total: 97)
+2025-08-01 21:07:30,892 - INFO - Clicked 'Show more results' button
+2025-08-01 21:07:33,927 - INFO -    Scroll 19: Found 20 new businesses (total: 117)
+2025-08-01 21:07:45,526 - INFO - Clicked 'Show more results' button
+2025-08-01 21:07:48,557 - INFO -    Scroll 20: Found 5 new businesses (total: 122)
+2025-08-01 21:07:59,961 - INFO - Clicked 'Show more results' button
+2025-08-01 21:08:03,006 - INFO -    Scroll 21: Found 1 new businesses (total: 123)
+2025-08-01 21:08:14,537 - INFO - Clicked 'Show more results' button
+2025-08-01 21:08:17,580 - INFO -    Scroll 22: No new businesses loaded (attempt 1/8)
+2025-08-01 21:08:29,089 - INFO - Clicked 'Show more results' button
+2025-08-01 21:08:32,138 - INFO -    Scroll 23: Found 1 new businesses (total: 123)
+2025-08-01 21:08:43,598 - INFO - Clicked 'Show more results' button
+2025-08-01 21:08:46,621 - INFO -    Scroll 24: No new businesses loaded (attempt 1/8)
+2025-08-01 21:08:58,036 - INFO - Clicked 'Show more results' button
+2025-08-01 21:09:01,081 - INFO -    Scroll 25: Found 1 new businesses (total: 123)
+2025-08-01 21:09:12,548 - INFO - Clicked 'Show more results' button
+2025-08-01 21:09:15,581 - INFO -    Scroll 26: No new businesses loaded (attempt 1/8)
+2025-08-01 21:09:27,040 - INFO - Clicked 'Show more results' button
+2025-08-01 21:09:30,078 - INFO -    Scroll 27: Found 1 new businesses (total: 123)
+2025-08-01 21:09:41,575 - INFO - Clicked 'Show more results' button
+2025-08-01 21:09:44,618 - INFO -    Scroll 28: No new businesses loaded (attempt 1/8)
+2025-08-01 21:09:56,040 - INFO - Clicked 'Show more results' button
+2025-08-01 21:09:59,081 - INFO -    Scroll 29: Found 1 new businesses (total: 123)
+2025-08-01 21:10:10,548 - INFO - Clicked 'Show more results' button
+2025-08-01 21:10:13,568 - INFO -    Scroll 30: No new businesses loaded (attempt 1/8)
+2025-08-01 21:10:25,034 - INFO - Clicked 'Show more results' button
+2025-08-01 21:10:28,083 - INFO -    Scroll 31: Found 1 new businesses (total: 123)
+2025-08-01 21:10:39,520 - INFO - Clicked 'Show more results' button
+2025-08-01 21:10:42,563 - INFO -    Scroll 32: No new businesses loaded (attempt 1/8)
+2025-08-01 21:10:54,046 - INFO - Clicked 'Show more results' button
+2025-08-01 21:10:57,082 - INFO -    Scroll 33: Found 1 new businesses (total: 123)
+2025-08-01 21:11:08,699 - INFO - Clicked 'Show more results' button
+2025-08-01 21:11:11,748 - INFO -    Scroll 34: No new businesses loaded (attempt 1/8)
+2025-08-01 21:11:23,279 - INFO - Clicked 'Show more results' button
+2025-08-01 21:11:26,325 - INFO -    Scroll 35: Found 1 new businesses (total: 123)
+2025-08-01 21:11:37,741 - INFO - Clicked 'Show more results' button
+2025-08-01 21:11:40,775 - INFO -    Scroll 36: No new businesses loaded (attempt 1/8)
+2025-08-01 21:11:52,216 - INFO - Clicked 'Show more results' button
+2025-08-01 21:11:54,271 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F417A380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6/elements
+2025-08-01 21:11:56,307 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F4178550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6/elements
+2025-08-01 21:11:58,343 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F4178730>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6/elements
+2025-08-01 21:12:00,365 - WARNING - Error scrolling results: HTTPConnectionPool(host='localhost', port=17551): Max retries exceeded with url: /session/e89f782028b960c85633627fa22baca6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F4179300>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-08-01 21:12:02,404 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F41795A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6/elements
+2025-08-01 21:12:04,438 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F417A3B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6/elements
+2025-08-01 21:12:06,496 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F417A5C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6/elements
+2025-08-01 21:12:10,552 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F4179990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6
+2025-08-01 21:12:12,589 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F4179540>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6
+2025-08-01 21:12:14,633 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000244F417A7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/e89f782028b960c85633627fa22baca6
+2025-08-01 21:14:20,174 - INFO - Setting up ChromeDriver...
+2025-08-01 21:14:20,175 - INFO - ====== WebDriver manager ======
+2025-08-01 21:14:21,181 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 21:14:21,915 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-01 21:14:22,638 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-01 21:14:22,643 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-01 21:14:24,145 - INFO - ChromeDriver setup successful
+2025-08-01 21:14:24,147 - INFO - Searching for: restaurants New York
+2025-08-01 21:14:24,147 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-01 21:14:37,609 - INFO - Found results container with selector: [role="main"]
+2025-08-01 21:14:37,610 - INFO - Starting endless scrolling to load all businesses...
+2025-08-01 21:14:49,585 - INFO - Clicked 'Show more results' button
+2025-08-01 21:14:52,894 - INFO -    Scroll 1: Found 5 new businesses (total: 10)
+2025-08-01 21:15:04,390 - INFO - Clicked 'Show more results' button
+2025-08-01 21:15:07,641 - INFO -    Scroll 2: Found 5 new businesses (total: 15)
+2025-08-01 21:15:19,199 - INFO - Clicked 'Show more results' button
+2025-08-01 21:15:22,456 - INFO -    Scroll 3: Found 5 new businesses (total: 20)
+2025-08-01 21:15:34,194 - INFO - Clicked 'Show more results' button
+2025-08-01 21:15:37,510 - INFO -    Scroll 4: Found 5 new businesses (total: 25)
+2025-08-01 21:15:49,251 - INFO - Clicked 'Show more results' button
+2025-08-01 21:15:52,552 - INFO -    Scroll 5: Found 5 new businesses (total: 30)
+2025-08-01 21:16:04,093 - INFO - Clicked 'Show more results' button
+2025-08-01 21:16:07,372 - INFO -    Scroll 6: Found 5 new businesses (total: 35)
+2025-08-01 21:16:19,306 - INFO - Clicked 'Show more results' button
+2025-08-01 21:16:22,623 - INFO -    Scroll 7: Found 5 new businesses (total: 40)
+2025-08-01 21:16:34,059 - INFO - Clicked 'Show more results' button
+2025-08-01 21:16:37,339 - INFO -    Scroll 8: Found 2 new businesses (total: 42)
+2025-08-01 21:16:49,089 - INFO - Clicked 'Show more results' button
+2025-08-01 21:16:52,372 - INFO -    Scroll 9: Found 5 new businesses (total: 47)
+2025-08-01 21:17:04,162 - INFO - Clicked 'Show more results' button
+2025-08-01 21:17:07,491 - INFO -    Scroll 10: Found 5 new businesses (total: 52)
+2025-08-01 21:17:19,169 - INFO - Clicked 'Show more results' button
+2025-08-01 21:17:22,457 - INFO -    Scroll 11: Found 5 new businesses (total: 57)
+2025-08-01 21:17:33,833 - INFO - Clicked 'Show more results' button
+2025-08-01 21:17:37,210 - INFO -    Scroll 12: Found 5 new businesses (total: 62)
+2025-08-01 21:17:48,934 - INFO - Clicked 'Show more results' button
+2025-08-01 21:17:52,211 - INFO -    Scroll 13: Found 5 new businesses (total: 67)
+2025-08-01 21:18:04,140 - INFO - Clicked 'Show more results' button
+2025-08-01 21:18:07,423 - INFO -    Scroll 14: Found 6 new businesses (total: 73)
+2025-08-01 21:18:18,761 - INFO - Clicked 'Show more results' button
+2025-08-01 21:18:22,039 - INFO -    Scroll 15: No new businesses loaded (attempt 1/8)
+2025-08-01 21:18:33,781 - INFO - Clicked 'Show more results' button
+2025-08-01 21:18:37,185 - INFO -    Scroll 16: Found 5 new businesses (total: 77)
+2025-08-01 21:18:48,599 - INFO - Clicked 'Show more results' button
+2025-08-01 21:18:51,920 - INFO -    Scroll 17: Found 5 new businesses (total: 82)
+2025-08-01 21:19:03,599 - INFO - Clicked 'Show more results' button
+2025-08-01 21:19:06,922 - INFO -    Scroll 18: Found 5 new businesses (total: 87)
+2025-08-01 21:19:18,684 - INFO - Clicked 'Show more results' button
+2025-08-01 21:19:22,088 - INFO -    Scroll 19: Found 5 new businesses (total: 92)
+2025-08-01 21:19:33,519 - INFO - Clicked 'Show more results' button
+2025-08-01 21:19:36,811 - INFO -    Scroll 20: Found 5 new businesses (total: 97)
+2025-08-01 21:19:48,290 - INFO - Clicked 'Show more results' button
+2025-08-01 21:19:51,622 - INFO -    Scroll 21: Found 5 new businesses (total: 102)
+2025-08-01 21:20:03,204 - INFO - Clicked 'Show more results' button
+2025-08-01 21:20:06,531 - INFO -    Scroll 22: Found 5 new businesses (total: 107)
+2025-08-01 21:20:17,996 - INFO - Clicked 'Show more results' button
+2025-08-01 21:20:21,306 - INFO -    Scroll 23: Found 5 new businesses (total: 112)
+2025-08-01 21:20:32,722 - INFO - Clicked 'Show more results' button
+2025-08-01 21:20:36,052 - INFO -    Scroll 24: Found 5 new businesses (total: 117)
+2025-08-01 21:20:47,538 - INFO - Clicked 'Show more results' button
+2025-08-01 21:20:50,846 - INFO -    Scroll 25: Found 5 new businesses (total: 122)
+2025-08-01 21:21:02,431 - INFO - Clicked 'Show more results' button
+2025-08-01 21:21:05,728 - INFO -    Scroll 26: Found 5 new businesses (total: 127)
+2025-08-01 21:21:17,234 - INFO - Clicked 'Show more results' button
+2025-08-01 21:21:20,586 - INFO -    Scroll 27: Found 9 new businesses (total: 136)
+2025-08-01 21:21:32,145 - INFO - Clicked 'Show more results' button
+2025-08-01 21:21:35,500 - INFO -    Scroll 28: No new businesses loaded (attempt 1/8)
+2025-08-01 21:21:47,220 - INFO - Clicked 'Show more results' button
+2025-08-01 21:21:50,538 - INFO -    Scroll 29: Found 5 new businesses (total: 137)
+2025-08-01 21:22:02,068 - INFO - Clicked 'Show more results' button
+2025-08-01 21:22:05,268 - INFO - Found end of list message: 'You've reached the end of the list.' - Stopping scraping
+2025-08-01 21:22:05,286 - INFO - Scraping completed successfully. Total businesses found: 142
+2025-08-01 21:22:05,316 - INFO - Found 142 elements with selector: .hfpxzc
+2025-08-01 21:22:09,284 - INFO - Processing 142 unique business elements
+2025-08-01 21:22:15,143 - INFO - Extracted business 1: The Modern
+2025-08-01 21:22:20,157 - INFO - Extracted business 2: The Modern
+2025-08-01 21:22:25,540 - INFO - Extracted business 3: The Modern
+2025-08-01 21:22:30,674 - INFO - Extracted business 4: Le Bernardin
+2025-08-01 21:22:36,025 - INFO - Extracted business 5: Russ & Daughters Cafe
+2025-08-01 21:22:41,498 - INFO - Extracted business 6: Russ & Daughters Cafe
+2025-08-01 21:22:47,122 - INFO - Extracted business 7: Manhatta
+2025-08-01 21:22:52,369 - INFO - Extracted business 8: Le Bernardin
+2025-08-01 21:22:58,000 - INFO - Extracted business 9: Via Carota
+2025-08-01 21:23:03,671 - INFO - Extracted business 10: Boucherie Union Square
+2025-08-01 21:23:08,740 - INFO - Extracted business 11: Boucherie Union Square
+2025-08-01 21:23:14,587 - INFO - Extracted business 12: Au Cheval
+2025-08-01 21:23:20,323 - INFO - Extracted business 13: Au Cheval
+2025-08-01 21:23:26,119 - INFO - Extracted business 14: Katz's Delicatessen
+2025-08-01 21:23:31,786 - INFO - Extracted business 15: Upland
+2025-08-01 21:23:37,478 - INFO - Extracted business 16: Upland
+2025-08-01 21:23:43,141 - INFO - Extracted business 17: Petite Boucherie
+2025-08-01 21:23:48,221 - INFO - Extracted business 18: Petite Boucherie
+2025-08-01 21:23:54,074 - INFO - Extracted business 19: Piccola Cucina Estiatorio
+2025-08-01 21:23:59,123 - INFO - Extracted business 20: Piccola Cucina Estiatorio
+2025-08-01 21:24:04,539 - INFO - Extracted business 21: Le Coucou
+2025-08-01 21:24:09,718 - INFO - Extracted business 22: Le Coucou
+2025-08-01 21:24:14,870 - INFO - Extracted business 23: HORTUS NYC
+2025-08-01 21:24:20,056 - INFO - Extracted business 24: HORTUS NYC
+2025-08-01 21:24:24,972 - ERROR - Error extracting business data from element 25: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5a88e9]
+	(No symbol) [0x0x5aac7a]
+	(No symbol) [0x0x5aacf7]
+	(No symbol) [0x0x5e558e]
+	(No symbol) [0x0x60f3ac]
+	(No symbol) [0x0x5dffa4]
+	(No symbol) [0x0x60f624]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 21:24:31,386 - INFO - Extracted business 25: Estela
+2025-08-01 21:24:37,280 - INFO - Extracted business 26: Estela
+2025-08-01 21:24:42,800 - INFO - Extracted business 27: Eataly
+2025-08-01 21:24:47,795 - INFO - Extracted business 28: Eataly
+2025-08-01 21:24:52,866 - INFO - Extracted business 29: Eataly
+2025-08-01 21:24:58,433 - INFO - Extracted business 30: Michael's New York
+2025-08-01 21:25:03,597 - INFO - Extracted business 31: Michael's New York
+2025-08-01 21:25:09,634 - INFO - Extracted business 32: Trinity Place
+2025-08-01 21:25:15,173 - INFO - Extracted business 33: Trinity Place
+2025-08-01 21:25:20,646 - ERROR - Error extracting business data from element 35: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5a88e9]
+	(No symbol) [0x0x5aac7a]
+	(No symbol) [0x0x5aacf7]
+	(No symbol) [0x0x5e558e]
+	(No symbol) [0x0x60f3ac]
+	(No symbol) [0x0x5dffa4]
+	(No symbol) [0x0x60f624]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 21:25:26,487 - INFO - Extracted business 34: The Wilson
+2025-08-01 21:25:31,630 - INFO - Extracted business 35: The Wilson
+2025-08-01 21:25:37,436 - INFO - Extracted business 36: DK Restaurant NYC
+2025-08-01 21:25:43,018 - ERROR - Error extracting business data from element 39: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.183); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0x75ba83+63395]
+	GetHandleVerifier [0x0x75bac4+63460]
+	(No symbol) [0x0x5a2113]
+	(No symbol) [0x0x5a88e9]
+	(No symbol) [0x0x5aaec3]
+	(No symbol) [0x0x6317b4]
+	(No symbol) [0x0x60f3ac]
+	(No symbol) [0x0x6307ba]
+	(No symbol) [0x0x60f1a6]
+	(No symbol) [0x0x5de7b2]
+	(No symbol) [0x0x5df654]
+	GetHandleVerifier [0x0x9d8883+2672035]
+	GetHandleVerifier [0x0x9d3cba+2652634]
+	GetHandleVerifier [0x0x782bca+223466]
+	GetHandleVerifier [0x0x772cb8+158168]
+	GetHandleVerifier [0x0x77978d+185517]
+	GetHandleVerifier [0x0x763b78+96408]
+	GetHandleVerifier [0x0x763d02+96802]
+	GetHandleVerifier [0x0x74e90a+9770]
+	BaseThreadInitThunk [0x0x76125d49+25]
+	RtlInitializeExceptionChain [0x0x773ad2fb+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad281+561]
+
+2025-08-01 21:25:48,725 - INFO - Extracted business 37: La Mercerie
+2025-08-01 21:25:55,101 - INFO - Extracted business 38: La Mercerie
+2025-08-01 21:26:00,960 - INFO - Extracted business 39: Anytime Kitchen
+2025-08-01 21:26:06,856 - INFO - Extracted business 40: Bubba Gump Shrimp Co.
+2025-08-01 21:26:11,948 - INFO - Extracted business 41: Bubba Gump Shrimp Co.
+2025-08-01 21:26:17,234 - INFO - Extracted business 42: Miznon
+2025-08-01 21:26:22,265 - INFO - Extracted business 43: Miznon
+2025-08-01 21:26:28,032 - INFO - Extracted business 44: Rezdôra
+2025-08-01 21:26:33,148 - INFO - Extracted business 45: Rezdôra
+2025-08-01 21:26:38,180 - INFO - Extracted business 46: Rezdôra
+2025-08-01 21:26:43,900 - INFO - Extracted business 47: Junoon
+2025-08-01 21:26:50,017 - INFO - Extracted business 48: Gelso & Grand
+2025-08-01 21:26:55,420 - INFO - Extracted business 49: Gelso & Grand
+2025-08-01 21:27:00,777 - INFO - Extracted business 50: Gallaghers Steakhouse
+2025-08-01 21:27:06,684 - INFO - Extracted business 51: Black Iron Burger
+2025-08-01 21:27:11,876 - INFO - Extracted business 52: Black Iron Burger
