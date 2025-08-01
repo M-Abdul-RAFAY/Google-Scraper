@@ -452,7 +452,7 @@ Solutions to try:
                                     self.logger.debug(f"Click failed for {business_name}: {str(click_error)[:50]}...")
                                 
                                 # Add required fields
-                                required_fields = ['rating', 'reviews_count', 'category', 'address', 'phone', 'website', 'hours', 'price_range', 'description']
+                                required_fields = ['rating', 'reviews_count', 'category', 'address', 'phone', 'website', 'business_website_url', 'hours', 'price_range', 'description']
                                 for field in required_fields:
                                     if field not in basic_data:
                                         basic_data[field] = ""
@@ -645,25 +645,95 @@ Solutions to try:
             except:
                 pass
             
-            # Enhanced website extraction
+            # Enhanced website extraction with focus on actual business websites
             try:
                 website_selectors = [
                     'button[data-item-id*="website"] .Io6YTe',
                     'button[aria-label*="Website"]',
-                    'a[href*="http"]',
+                    'button[data-item-id="website"]',
                     '[data-item-id="website"]',
-                    'button[data-item-id="website"]'
+                    'button[data-item-id="website"] span',
+                    'a[href*="http"]',
+                    'button[aria-label*="website"]'
                 ]
                 
                 for selector in website_selectors:
                     try:
                         website_element = self.driver.find_element(By.CSS_SELECTOR, selector)
-                        website_text = website_element.text.strip() or website_element.get_attribute('href')
-                        if website_text and ('http' in website_text or '.com' in website_text or '.org' in website_text):
-                            data['website'] = website_text
-                            break
+                        website_text = website_element.text.strip() or website_element.get_attribute('href') or website_element.get_attribute('aria-label')
+                        
+                        if website_text:
+                            # Clean up website text
+                            if 'Website:' in website_text:
+                                website_text = website_text.replace('Website:', '').strip()
+                            
+                            # Store Google Maps URL as website
+                            if ('http' in website_text or '.com' in website_text or '.org' in website_text or '.net' in website_text):
+                                data['website'] = website_text
+                                break
                     except:
                         continue
+                        
+                # Extract business website URL from the specific HTML structure provided
+                try:
+                    # Look for the specific structure: .AeaXub .rogA2c .gSkmPd containing the business website
+                    business_website_elements = self.driver.find_elements(By.CSS_SELECTOR, '.AeaXub .rogA2c .gSkmPd.fontBodySmall.DshQNd')
+                    for elem in business_website_elements:
+                        website_text = elem.text.strip()
+                        if website_text and ('.com' in website_text or '.org' in website_text or '.net' in website_text or '.edu' in website_text):
+                            # Validate it's a business website (not Google)
+                            if 'google.com' not in website_text and 'maps' not in website_text:
+                                data['business_website_url'] = website_text
+                                break
+                    
+                    # Alternative selector for business website
+                    if 'business_website_url' not in data:
+                        alt_selectors = [
+                            '.gSkmPd.fontBodySmall.DshQNd',
+                            '.rogA2c .gSkmPd',
+                            '.Io6YTe + .HMy2Jf + .gSkmPd'
+                        ]
+                        for selector in alt_selectors:
+                            try:
+                                elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                                for elem in elements:
+                                    text = elem.text.strip()
+                                    if text and any(domain in text for domain in ['.com', '.org', '.net', '.edu']) and 'google.com' not in text:
+                                        data['business_website_url'] = text
+                                        break
+                                if 'business_website_url' in data:
+                                    break
+                            except:
+                                continue
+                except:
+                    pass
+                        
+                # If no website found with selectors, try to find website links in the sidebar text
+                if 'website' not in data:
+                    try:
+                        sidebar_elements = self.driver.find_elements(By.CSS_SELECTOR, '.TIHn2, .m6QErb, [role="main"]')
+                        for sidebar in sidebar_elements:
+                            # Look for clickable website elements
+                            website_links = sidebar.find_elements(By.CSS_SELECTOR, 'a[href*="http"]')
+                            for link in website_links:
+                                href = link.get_attribute('href')
+                                if href:
+                                    data['website'] = href
+                                    break
+                            if 'website' in data:
+                                break
+                                
+                            # Also check for website buttons that might contain the URL
+                            website_buttons = sidebar.find_elements(By.CSS_SELECTOR, 'button[data-item-id*="website"], button[aria-label*="Website"]')
+                            for button in website_buttons:
+                                button_text = button.text.strip()
+                                if button_text and any(domain in button_text for domain in ['.com', '.org', '.net', '.edu', '.gov']):
+                                    data['website'] = button_text
+                                    break
+                            if 'website' in data:
+                                break
+                    except:
+                        pass
             except:
                 pass
             
@@ -996,6 +1066,40 @@ Solutions to try:
                 except:
                     continue
             
+            # Enhanced website URL extraction from element links and text
+            try:
+                # First try to find actual clickable website links (keep Google Maps URLs)
+                website_links = element.find_elements(By.CSS_SELECTOR, 'a[href*="http"]')
+                for link in website_links:
+                    href = link.get_attribute('href')
+                    if href:
+                        business_data['website'] = href
+                        break
+                        
+                # Extract business website from specific HTML structure (.gSkmPd elements)
+                try:
+                    business_website_elements = element.find_elements(By.CSS_SELECTOR, '.gSkmPd.fontBodySmall.DshQNd, .gSkmPd')
+                    for elem in business_website_elements:
+                        text = elem.text.strip()
+                        if text and any(domain in text for domain in ['.com', '.org', '.net', '.edu']) and 'google.com' not in text:
+                            business_data['business_website_url'] = text
+                            break
+                except:
+                    pass
+                        
+                # Also look for website text patterns in element
+                if 'business_website_url' not in business_data:
+                    website_text_elements = element.find_elements(By.XPATH, ".//*[contains(text(), '.com') or contains(text(), '.org') or contains(text(), '.net')]")
+                    for elem in website_text_elements:
+                        text = elem.text.strip()
+                        if text and 'google.com' not in text and 'maps' not in text and len(text) < 100:
+                            # Validate it looks like a business website
+                            if re.match(r'^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', text) or any(domain in text for domain in ['.com', '.org', '.net']):
+                                business_data['business_website_url'] = text
+                                break
+            except:
+                pass
+            
             # Try to extract additional info from the element's text content
             try:
                 full_text = element.text
@@ -1058,6 +1162,20 @@ Solutions to try:
                             if (any(time_word in line.lower() for time_word in ['open', 'close', 'hours', 'pm', 'am']) and
                                 len(line) < 100):
                                 business_data['hours'] = line
+                                continue
+                                
+                        # Look for website URLs
+                        if ('website' not in business_data or not business_data['website']):
+                            if (('http' in line or '.com' in line or '.org' in line or '.net' in line) and 
+                                len(line) < 200):
+                                business_data['website'] = line
+                                continue
+                                
+                        # Look for business website URLs (excluding Google URLs)
+                        if ('business_website_url' not in business_data or not business_data['business_website_url']):
+                            if (('.com' in line or '.org' in line or '.net' in line or '.edu' in line) and 
+                                'google.com' not in line and 'maps' not in line and len(line) < 100):
+                                business_data['business_website_url'] = line
                                 continue
                                 
             except Exception as e:

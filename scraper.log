@@ -12802,3 +12802,509 @@ Stacktrace:
 2025-08-02 00:16:57,143 - INFO - Saved 120 businesses to restaurants_New_York_1754075817.csv
 2025-08-02 00:16:57,153 - INFO - Saved 120 businesses to restaurants_New_York_1754075817.json
 2025-08-02 00:16:59,812 - INFO - WebDriver closed
+2025-08-02 01:32:31,087 - INFO - Setting up ChromeDriver...
+2025-08-02 01:32:31,089 - INFO - ====== WebDriver manager ======
+2025-08-02 01:32:32,359 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 01:32:33,584 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 01:32:34,425 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-02 01:32:34,436 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-02 01:32:36,040 - INFO - ChromeDriver setup successful
+2025-08-02 01:32:36,043 - INFO - Searching for: restaurants New York
+2025-08-02 01:32:36,045 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-02 01:32:54,257 - INFO - Found results container with selector: [role="main"]
+2025-08-02 01:32:54,257 - INFO - Starting endless scrolling to load all businesses...
+2025-08-02 01:33:03,551 - INFO - Clicked 'Show more results' button
+2025-08-02 01:33:05,992 - INFO -    Scroll 1: Found 30 new businesses (total: 50)
+2025-08-02 01:33:15,099 - INFO - Clicked 'Show more results' button
+2025-08-02 01:33:17,721 - INFO -    Scroll 2: Found 25 new businesses (total: 75)
+2025-08-02 01:33:27,402 - INFO - Clicked 'Show more results' button
+2025-08-02 01:33:30,284 - INFO -    Scroll 3: Found 25 new businesses (total: 100)
+2025-08-02 01:33:39,754 - INFO - Clicked 'Show more results' button
+2025-08-02 01:33:42,024 - INFO - Found end of list message: 'You've reached the end of the list.' - Stopping scraping
+2025-08-02 01:33:42,215 - INFO - Scraping completed successfully. Total businesses found: 120
+2025-08-02 01:33:42,217 - INFO - Starting business data extraction...
+2025-08-02 01:33:42,258 - INFO - Processing batch 1-20 of 120 total elements
+2025-08-02 01:33:53,124 - INFO - [1] Extracted: Gramercy Tavern - Rating: 4.6 - Category: Restaurant
+2025-08-02 01:34:03,331 - INFO - [2] Extracted: Boucherie West Village - Rating: 4.7 - Category: French restaurant
+2025-08-02 01:34:12,583 - INFO - [3] Extracted: Balthazar - Rating: 4.4 - Category: French restaurant
+2025-08-02 01:34:21,856 - INFO - [4] Extracted: Manhatta - Rating: 4.7 - Category: Restaurant
+2025-08-02 01:34:31,383 - INFO - [5] Extracted: Piccola Cucina Osteria Siciliana - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 01:34:40,804 - INFO - [6] Extracted: Via Carota - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 01:34:50,124 - INFO - [7] Extracted: OLIO E PIÙ - Rating: 4.7 - Category: Italian restaurant
+2025-08-02 01:34:59,517 - INFO - [8] Extracted: Au Cheval - Rating: 4.7 - Category: New American restaurant
+2025-08-02 01:35:08,976 - INFO - [9] Extracted: Boucherie Union Square - Rating: 4.7 - Category: French restaurant
+2025-08-02 01:35:19,086 - INFO - [10] Extracted: La Grande Boucherie - Rating: 4.6 - Category: French restaurant
+2025-08-02 01:35:29,257 - INFO - [11] Extracted: Katz's Delicatessen - Rating: 4.5 - Category: Deli
+2025-08-02 01:35:38,747 - INFO - [12] Extracted: Per Se - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 01:35:48,259 - INFO - [13] Extracted: ROBERT - Rating: 4.5 - Category: American restaurant
+2025-08-02 01:35:57,901 - INFO - [14] Extracted: 1803 NYC - Rating: 4.5 - Category: Cajun restaurant
+2025-08-02 01:36:07,366 - INFO - [15] Extracted: Petite Boucherie - Rating: 4.7 - Category: French restaurant
+2025-08-02 01:36:16,738 - INFO - [16] Extracted: Chama Mama - Rating: 4.6 - Category: Georgian restaurant
+2025-08-02 01:36:26,079 - INFO - [17] Extracted: Piccola Cucina Estiatorio - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 01:36:35,542 - INFO - [18] Extracted: The Modern - Rating: 4.6 - Category: Restaurant
+2025-08-02 01:36:45,157 - INFO - [19] Extracted: Russ & Daughters Cafe - Rating: 4.6 - Category: American restaurant
+2025-08-02 01:36:54,786 - INFO - [20] Extracted: O'Hara's Restaurant and Pub - Rating: 4.6 - Category: American restaurant
+2025-08-02 01:36:55,325 - INFO - Processing batch 21-40 of 120 total elements
+2025-08-02 01:37:05,457 - INFO - [21] Extracted: Ci Siamo - Rating: 4.6 - Category: Restaurant
+2025-08-02 01:37:14,939 - INFO - [22] Extracted: Riverpark - Rating: 4.6 - Category: New American restaurant
+2025-08-02 01:37:24,386 - INFO - [23] Extracted: La Mercerie - Rating: 4.2 - Category: Restaurant
+2025-08-02 01:37:33,937 - INFO - [24] Extracted: Le Jardin Bistro NYC - Rating: 4.7 - Category: French restaurant
+2025-08-02 01:37:43,418 - INFO - [25] Extracted: MOE EATS NYC - Rating: 5.0 - Category: Restaurant
+2025-08-02 01:37:52,943 - INFO - [26] Extracted: The York - Rating: 4.9 - Category: Pub
+2025-08-02 01:38:02,455 - INFO - [27] Extracted: Le Bernardin - Rating: 4.6 - Category: French restaurant
+2025-08-02 01:38:11,851 - INFO - [28] Extracted: COTE Korean Steakhouse - Rating: 4.6 - Category: Steak house
+2025-08-02 01:38:21,188 - INFO - [29] Extracted: Benoit New York - Rating: 4.4 - Category: French restaurant
+2025-08-02 01:38:30,722 - INFO - [30] Extracted: SESAMO - Italian Restaurant Hell's Kitchen - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 01:38:40,159 - INFO - [31] Extracted: Junoon - Rating: 4.3 - Category: Indian restaurant
+2025-08-02 01:38:49,629 - INFO - [32] Extracted: Pesce lulu Seafood Kitchen NYC - Rating: 4.8 - Category: Seafood restaurant
+2025-08-02 01:38:58,919 - INFO - [33] Extracted: Gallaghers Steakhouse - Rating: 4.6 - Category: Steak house
+2025-08-02 01:39:08,354 - INFO - [34] Extracted: The Wilson - Rating: 4.4 - Category: American restaurant
+2025-08-02 01:39:18,145 - INFO - [35] Extracted: Freemans - Rating: 4.4 - Category: American restaurant
+2025-08-02 01:39:27,575 - INFO - [36] Extracted: Buena Vista Restaurant & Bar - Rating: 4.7 - Category: Latin American restaurant
+2025-08-02 01:39:37,293 - INFO - [37] Extracted: Craft New York - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 01:39:37,825 - INFO - Processing batch 41-60 of 120 total elements
+2025-08-02 01:39:47,141 - INFO - [38] Extracted: Felice 56 - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 01:39:56,432 - INFO - [39] Extracted: Hawksmoor NYC - Rating: 4.4 - Category: Steak house
+2025-08-02 01:40:05,900 - INFO - [40] Extracted: The Landing - Rating: 4.6 - Category: Restaurant
+2025-08-02 01:40:15,620 - INFO - [41] Extracted: Mari Vanna - Rating: 4.5 - Category: Eastern European restaurant
+2025-08-02 01:40:25,079 - INFO - [42] Extracted: Estela - Rating: 4.5 - Category: Restaurant
+2025-08-02 01:40:34,512 - INFO - [43] Extracted: Le Pavillon - Rating: 4.6 - Category: French restaurant
+2025-08-02 01:40:44,069 - INFO - [44] Extracted: Crown Shy - Rating: 4.5 - Category: American restaurant
+2025-08-02 01:40:53,701 - INFO - [45] Extracted: Gelso & Grand - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 01:41:03,158 - INFO - [46] Extracted: Reyna New York - Rating: 4.6 - Category: Mediterranean restaurant
+2025-08-02 01:41:12,528 - INFO - [47] Extracted: S'MAC - Rating: 4.5 - Category: American restaurant
+2025-08-02 01:41:22,261 - INFO - [48] Extracted: Palma - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 01:41:32,030 - INFO - [49] Extracted: Club A Steakhouse - Rating: 4.8 - Category: Steak house
+2025-08-02 01:41:41,425 - INFO - [50] Extracted: Koloman - Rating: 4.4 - Category: Modern French restaurant
+2025-08-02 01:41:50,757 - INFO - [51] Extracted: Le Coucou - Rating: 4.5 - Category: Restaurant
+2025-08-02 01:42:00,155 - INFO - [52] Extracted: Fish Cheeks - Rating: 4.8 - Category: Thai restaurant
+2025-08-02 01:42:09,523 - INFO - [53] Extracted: Hav & Mar - Rating: 4.5 - Category: Swedish restaurant
+2025-08-02 01:42:19,028 - INFO - [54] Extracted: Miznon - Rating: 4.5 - Category: Mediterranean restaurant
+2025-08-02 01:42:28,493 - INFO - [55] Extracted: Clinton St. Baking Company - Rating: 4.4 - Category: American restaurant
+2025-08-02 01:42:38,062 - INFO - [56] Extracted: Black Iron Burger - Rating: 4.5 - Category: Hamburger restaurant
+2025-08-02 01:42:38,610 - INFO - Processing batch 61-80 of 120 total elements
+2025-08-02 01:42:48,041 - INFO - [57] Extracted: Anytime Kitchen - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 01:42:57,450 - INFO - [58] Extracted: Tasca NYC - Rating: 4.6 - Category: Latin American restaurant
+2025-08-02 01:43:06,753 - INFO - [59] Extracted: Kochi - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 01:43:16,120 - INFO - [60] Extracted: Butcher and Banker NYC - Rating: 4.1 - Category: American restaurant
+2025-08-02 01:43:25,528 - INFO - [61] Extracted: Sky Pavilion 川雲涧 - Rating: 4.7 - Category: Chinese restaurant
+2025-08-02 01:43:34,903 - INFO - [62] Extracted: Cosme - Rating: 4.3 - Category: Mexican restaurant
+2025-08-02 01:43:44,284 - INFO - [63] Extracted: Blue Fin - Rating: 4.2 - Category: Seafood restaurant
+2025-08-02 01:43:53,728 - INFO - [64] Extracted: Frenchette - Rating: 4.3 - Category: French restaurant
+2025-08-02 01:44:03,159 - INFO - [65] Extracted: OCabanon - Rating: 4.4 - Category: French restaurant
+2025-08-02 01:44:12,454 - INFO - [66] Extracted: HORTUS NYC - Rating: 4.5 - Category: Asian fusion restaurant
+2025-08-02 01:44:21,753 - INFO - [67] Extracted: Trinity Place - Rating: 4.4 - Category: American restaurant
+2025-08-02 01:44:31,197 - INFO - [68] Extracted: Rezdôra - Rating: 4.2 - Category: Italian restaurant
+2025-08-02 01:44:40,561 - INFO - [69] Extracted: Forgione - Rating: 4.6 - Category: American restaurant
+2025-08-02 01:44:50,231 - INFO - [70] Extracted: Tiny's & The Bar Upstairs - Rating: 4.4 - Category: American restaurant
+2025-08-02 01:44:59,627 - INFO - [71] Extracted: Jams - Rating: 4.2 - Category: Restaurant
+2025-08-02 01:45:09,002 - INFO - [72] Extracted: Michael's New York - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 01:45:18,344 - INFO - [73] Extracted: Time Out Market New York - Rating: 4.5 - Category: Food court
+2025-08-02 01:45:27,694 - INFO - [74] Extracted: P.J. Clarke's On The Hudson - Rating: 4.2 - Category: American restaurant
+2025-08-02 01:45:37,124 - INFO - [75] Extracted: Joseph's Restaurant - Rating: 4.5 - Category: Northern Italian restaurant
+2025-08-02 01:45:46,441 - INFO - [76] Extracted: Felice 15 Gold - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 01:45:46,999 - INFO - Processing batch 81-100 of 120 total elements
+2025-08-02 01:45:56,442 - INFO - [77] Extracted: Congee Village - Rating: 4.1 - Category: Chinese restaurant
+2025-08-02 01:46:05,921 - INFO - [78] Extracted: Wildair - Rating: 4.4 - Category: New American restaurant
+2025-08-02 01:46:15,429 - INFO - [79] Extracted: Lex Restaurant - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 01:46:24,726 - INFO - [80] Extracted: Berimbau Brazilian Kitchen - West Village - Rating: 4.6 - Category: Brazilian restaurant
+2025-08-02 01:46:34,173 - INFO - [81] Extracted: DK Restaurant NYC - Rating: 4.3 - Category: Steak house
+2025-08-02 01:46:43,678 - INFO - [82] Extracted: Atoboy - Rating: 4.5 - Category: Korean restaurant
+2025-08-02 01:46:53,147 - INFO - [83] Extracted: Loi Estiatorio - Rating: 4.6 - Category: Greek restaurant
+2025-08-02 01:47:02,599 - INFO - [84] Extracted: Jungsik - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 01:47:12,219 - INFO - [85] Extracted: Great NY Noodletown - Rating: 4.1 - Category: Chinese restaurant
+2025-08-02 01:47:21,562 - INFO - [86] Extracted: Nittis Italian Restaurant in Hell's Kitchen - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 01:47:30,876 - INFO - [87] Extracted: Gayle's Broadway Rose - Rating: 4.5 - Category: Restaurant
+2025-08-02 01:47:40,309 - INFO - [88] Extracted: Bubba Gump Shrimp Co. - Rating: 4.3 - Category: Seafood restaurant
+2025-08-02 01:47:49,777 - INFO - [89] Extracted: Villa Mosconi Restaurant - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 01:47:59,101 - INFO - [90] Extracted: Bua Thai Ramen & Robata Grill - Rating: 4.8 - Category: Thai restaurant
+2025-08-02 01:48:08,479 - INFO - [91] Extracted: Raoul's - Rating: 4.5 - Category: French restaurant
+2025-08-02 01:48:17,871 - INFO - [92] Extracted: Benihana - Rating: 4.3 - Category: Japanese restaurant
+2025-08-02 01:48:27,303 - INFO - [93] Extracted: The Musket Room - Rating: 4.5 - Category: New American restaurant
+2025-08-02 01:48:36,779 - INFO - [94] Extracted: Dhamaka - Rating: 4.5 - Category: Indian restaurant
+2025-08-02 01:48:46,166 - INFO - [95] Extracted: Brooklyn Diner - Rating: 4.2 - Category: Diner
+2025-08-02 01:48:55,673 - INFO - [96] Extracted: La Esquina Brasserie - Rating: 4.1 - Category: Mexican restaurant
+2025-08-02 01:48:56,217 - INFO - Processing batch 101-120 of 120 total elements
+2025-08-02 01:49:05,820 - INFO - [97] Extracted: ATOMIX - Rating: 4.7 - Category: Korean restaurant
+2025-08-02 01:49:15,212 - INFO - [98] Extracted: B&H Dairy - Rating: 4.7 - Category: Kosher restaurant
+2025-08-02 01:49:24,665 - INFO - [99] Extracted: Añejo - Rating: 4.4 - Category: Mexican restaurant
+2025-08-02 01:49:33,969 - INFO - [100] Extracted: La Mela - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 01:49:43,377 - INFO - [101] Extracted: Eataly - Rating: 4.2 - Category: Italian restaurant
+2025-08-02 01:49:52,837 - INFO - [102] Extracted: Toledo Restaurant - Rating: 4.5 - Category: Spanish restaurant
+2025-08-02 01:50:02,100 - INFO - [103] Extracted: Minetta Tavern - Rating: 4.5 - Category: French restaurant
+2025-08-02 01:50:11,526 - INFO - [104] Extracted: Kuu - Rating: 4.4 - Category: Ramen restaurant
+2025-08-02 01:50:20,838 - INFO - [105] Extracted: Casa Cruz Upper East Side Restaurant - Rating: 4.1 - Category: Restaurant
+2025-08-02 01:50:30,154 - INFO - [106] Extracted: Thai Diner - Rating: 4.4 - Category: Thai restaurant
+2025-08-02 01:50:39,689 - INFO - [107] Extracted: Clover Hill - Rating: 4.6 - Category: Fine dining restaurant
+2025-08-02 01:50:49,124 - INFO - [108] Extracted: Eleven Madison Park - Rating: 4.4 - Category: Fine dining restaurant
+2025-08-02 01:50:58,491 - INFO - [109] Extracted: Benjamin Steakhouse - Rating: 4.5 - Category: Steak house
+2025-08-02 01:51:07,811 - INFO - [110] Extracted: Wayla - Rating: 4.4 - Category: Thai restaurant
+2025-08-02 01:51:17,239 - INFO - [111] Extracted: Tatiana by Kwame Onwuachi - Rating: 4.3 - Category: Caribbean restaurant
+2025-08-02 01:51:27,186 - INFO - [112] Extracted: Antalia NYC Restaurant/Caterer - Rating: 4.4 - Category: Turkish restaurant
+2025-08-02 01:51:36,578 - INFO - [113] Extracted: Blue Ribbon Brasserie - Rating: 4.6 - Category: American restaurant
+2025-08-02 01:51:46,028 - INFO - [114] Extracted: Meijin Ramen - Rating: 4.7 - Category: Ramen restaurant
+2025-08-02 01:51:55,436 - INFO - [115] Extracted: Schilling Restaurant & Bar - Rating: 4.4 - Category: Austrian restaurant
+2025-08-02 01:52:04,977 - INFO - [116] Extracted: Pure Thai Cookhouse - Rating: 4.6 - Category: Thai restaurant
+2025-08-02 01:52:05,512 - INFO - Processed all 120 available business elements
+2025-08-02 01:52:05,513 - INFO - Total businesses extracted: 116
+2025-08-02 01:52:05,513 - INFO - Successfully scraped 116 businesses
+2025-08-02 01:52:05,529 - INFO - Saved 116 businesses to restaurants_New_York_1754081525.csv
+2025-08-02 01:52:05,535 - INFO - Saved 116 businesses to restaurants_New_York_1754081525.json
+2025-08-02 01:52:08,056 - INFO - WebDriver closed
+2025-08-02 01:58:33,864 - INFO - Setting up ChromeDriver...
+2025-08-02 01:58:33,865 - INFO - ====== WebDriver manager ======
+2025-08-02 01:58:34,961 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 01:58:35,859 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 01:58:36,687 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-02 01:58:36,691 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-02 01:58:37,845 - INFO - ChromeDriver setup successful
+2025-08-02 01:58:37,845 - INFO - Searching for: restaurants New York
+2025-08-02 01:58:37,846 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-02 01:58:55,015 - INFO - Found results container with selector: [role="main"]
+2025-08-02 01:58:55,015 - INFO - Starting endless scrolling to load all businesses...
+2025-08-02 01:59:04,941 - INFO - Clicked 'Show more results' button
+2025-08-02 01:59:07,247 - INFO -    Scroll 1: Found 30 new businesses (total: 90)
+2025-08-02 01:59:16,543 - INFO - Clicked 'Show more results' button
+2025-08-02 01:59:19,270 - INFO -    Scroll 2: Found 15 new businesses (total: 105)
+2025-08-02 01:59:28,695 - INFO - Clicked 'Show more results' button
+2025-08-02 01:59:30,954 - INFO - Found end of list message: 'You've reached the end of the list.' - Stopping scraping
+2025-08-02 01:59:31,016 - INFO - Scraping completed successfully. Total businesses found: 120
+2025-08-02 01:59:31,018 - INFO - Starting business data extraction...
+2025-08-02 01:59:31,083 - INFO - Processing batch 1-20 of 120 total elements
+2025-08-02 01:59:41,442 - INFO - [1] Extracted: Gramercy Tavern - Rating: 4.6 - Category: Restaurant
+2025-08-02 01:59:50,946 - INFO - [2] Extracted: Boucherie West Village - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:00:00,608 - INFO - [3] Extracted: Balthazar - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:00:10,096 - INFO - [4] Extracted: Manhatta - Rating: 4.7 - Category: Restaurant
+2025-08-02 02:00:19,522 - INFO - [5] Extracted: Piccola Cucina Osteria Siciliana - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:00:28,890 - INFO - [6] Extracted: Via Carota - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:00:38,354 - INFO - [7] Extracted: OLIO E PIÙ - Rating: 4.7 - Category: Italian restaurant
+2025-08-02 02:00:47,924 - INFO - [8] Extracted: Au Cheval - Rating: 4.7 - Category: New American restaurant
+2025-08-02 02:00:57,582 - INFO - [9] Extracted: Boucherie Union Square - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:01:07,251 - INFO - [10] Extracted: La Grande Boucherie - Rating: 4.6 - Category: French restaurant
+2025-08-02 02:01:16,794 - INFO - [11] Extracted: Katz's Delicatessen - Rating: 4.5 - Category: Deli
+2025-08-02 02:01:20,955 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB730>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:22,985 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:31,148 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEABD60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:33,210 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEABF70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:35,253 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0EEF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:41,384 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB3A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:43,426 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:45,444 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB2E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:49,515 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0F100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:01:51,560 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0F4F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:01,760 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0FEB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:03,813 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0D900>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:05,846 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEE80A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:09,910 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0FA60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:11,942 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0F880>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:13,971 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0F1F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:18,048 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0F520>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:20,081 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DE0EF20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:24,165 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB730>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:28,230 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016F5DEAB520>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d996cf817c74e32ce3cde3b0ca03afca/element/f.E68FF283650C705BC15A34B02BBCD248.d.727A2987286F645BF63EB9CD867703CA.e.114/elements
+2025-08-02 02:02:44,508 - INFO - Setting up ChromeDriver...
+2025-08-02 02:02:44,509 - INFO - ====== WebDriver manager ======
+2025-08-02 02:02:45,667 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 02:02:46,492 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 02:02:47,256 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-02 02:02:47,260 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-02 02:02:48,443 - INFO - ChromeDriver setup successful
+2025-08-02 02:02:48,444 - INFO - Searching for: restaurants New York
+2025-08-02 02:02:48,444 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-02 02:03:07,531 - INFO - Found results container with selector: [role="main"]
+2025-08-02 02:03:07,531 - INFO - Starting endless scrolling to load all businesses...
+2025-08-02 02:03:21,713 - INFO - Clicked 'Show more results' button
+2025-08-02 02:03:23,919 - INFO - Found end of list message: 'You've reached the end of the list.' - Stopping scraping
+2025-08-02 02:03:23,937 - INFO - Scraping completed successfully. Total businesses found: 120
+2025-08-02 02:03:23,938 - INFO - Starting business data extraction...
+2025-08-02 02:03:23,955 - INFO - Processing batch 1-20 of 120 total elements
+2025-08-02 02:03:33,523 - INFO - [1] Extracted: Gramercy Tavern - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:03:43,013 - INFO - [2] Extracted: Boucherie West Village - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:03:52,393 - INFO - [3] Extracted: Balthazar - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:04:17,546 - INFO - Setting up ChromeDriver...
+2025-08-02 02:04:17,547 - INFO - ====== WebDriver manager ======
+2025-08-02 02:04:18,717 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 02:04:19,720 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 02:04:20,949 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-02 02:04:20,954 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-02 02:04:22,131 - INFO - ChromeDriver setup successful
+2025-08-02 02:04:22,132 - INFO - Searching for: restaurants New York
+2025-08-02 02:04:22,132 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-02 02:04:37,499 - INFO - Found results container with selector: [role="main"]
+2025-08-02 02:04:37,499 - INFO - Starting endless scrolling to load all businesses...
+2025-08-02 02:04:48,540 - INFO - Clicked 'Show more results' button
+2025-08-02 02:04:52,786 - INFO -    Scroll 1: Found 25 new businesses (total: 87)
+2025-08-02 02:05:02,461 - INFO - Clicked 'Show more results' button
+2025-08-02 02:05:05,618 - INFO -    Scroll 2: Found 20 new businesses (total: 107)
+2025-08-02 02:05:15,209 - INFO - Clicked 'Show more results' button
+2025-08-02 02:05:17,466 - INFO - Found end of list message: 'You've reached the end of the list.' - Stopping scraping
+2025-08-02 02:05:17,505 - INFO - Scraping completed successfully. Total businesses found: 122
+2025-08-02 02:05:17,506 - INFO - Starting business data extraction...
+2025-08-02 02:05:17,678 - INFO - Processing batch 1-20 of 122 total elements
+2025-08-02 02:05:21,298 - INFO - [1] Extracted: Gramercy Tavern - Rating:  - Category: 
+2025-08-02 02:05:31,486 - INFO - [2] Extracted: Boucherie West Village - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:05:41,260 - INFO - [3] Extracted: Balthazar - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:05:50,847 - INFO - [4] Extracted: The Modern - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:06:00,255 - INFO - [5] Extracted: Manhatta - Rating: 4.7 - Category: Restaurant
+2025-08-02 02:06:09,749 - INFO - [6] Extracted: Piccola Cucina Osteria Siciliana - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:06:19,446 - INFO - [7] Extracted: Le Bernardin - Rating: 4.6 - Category: French restaurant
+2025-08-02 02:06:28,929 - INFO - [8] Extracted: Via Carota - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:06:38,388 - INFO - [9] Extracted: Boucherie Union Square - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:06:47,920 - INFO - [10] Extracted: La Grande Boucherie - Rating: 4.6 - Category: French restaurant
+2025-08-02 02:06:57,608 - INFO - [11] Extracted: OLIO E PIÙ - Rating: 4.7 - Category: Italian restaurant
+2025-08-02 02:07:07,387 - INFO - [12] Extracted: Au Cheval - Rating: 4.7 - Category: New American restaurant
+2025-08-02 02:07:16,820 - INFO - [13] Extracted: Crown Shy - Rating: 4.5 - Category: American restaurant
+2025-08-02 02:07:26,825 - INFO - [14] Extracted: Katz's Delicatessen - Rating: 4.5 - Category: Deli
+2025-08-02 02:07:36,569 - INFO - [15] Extracted: Per Se - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 02:07:45,958 - INFO - [16] Extracted: ROBERT - Rating: 4.5 - Category: American restaurant
+2025-08-02 02:07:55,585 - INFO - [17] Extracted: Upland - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:08:05,241 - INFO - [18] Extracted: 1803 NYC - Rating: 4.5 - Category: Cajun restaurant
+2025-08-02 02:08:15,074 - INFO - [19] Extracted: Petite Boucherie - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:08:24,428 - INFO - [20] Extracted: Chama Mama - Rating: 4.6 - Category: Georgian restaurant
+2025-08-02 02:08:24,972 - INFO - Processing batch 21-40 of 122 total elements
+2025-08-02 02:08:35,348 - INFO - [21] Extracted: Piccola Cucina Estiatorio - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:08:49,834 - INFO - [22] Extracted: MOE EATS NYC - Rating: 5.0 - Category: Restaurant
+2025-08-02 02:08:59,735 - INFO - [23] Extracted: COTE Korean Steakhouse - Rating: 4.6 - Category: Steak house
+2025-08-02 02:09:15,216 - INFO - [24] Extracted: The Consulate UWS - Rating: 4.6 - Category: French restaurant
+2025-08-02 02:09:24,728 - INFO - [25] Extracted: Ci Siamo - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:09:34,243 - INFO - [26] Extracted: Riverpark - Rating: 4.6 - Category: New American restaurant
+2025-08-02 02:09:43,948 - INFO - [27] Extracted: Palma - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:09:53,333 - INFO - [28] Extracted: La Mercerie - Rating: 4.2 - Category: Restaurant
+2025-08-02 02:10:02,791 - INFO - [29] Extracted: Craft New York - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 02:10:12,268 - INFO - [30] Extracted: Benoit New York - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:10:25,263 - INFO - [31] Extracted: The York - Rating: 4.9 - Category: Pub
+2025-08-02 02:10:34,817 - INFO - [32] Extracted: Kochi - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 02:10:45,415 - INFO - [33] Extracted: SESAMO - Italian Restaurant Hell's Kitchen - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:10:56,726 - INFO - [34] Extracted: Cosme - Rating: 4.3 - Category: Mexican restaurant
+2025-08-02 02:11:07,960 - INFO - [35] Extracted: Junoon - Rating: 4.3 - Category: Indian restaurant
+2025-08-02 02:11:18,562 - INFO - [36] Extracted: Hav & Mar - Rating: 4.5 - Category: Swedish restaurant
+2025-08-02 02:11:28,740 - INFO - [37] Extracted: Gallaghers Steakhouse - Rating: 4.6 - Category: Steak house
+2025-08-02 02:11:29,284 - INFO - Processing batch 41-60 of 122 total elements
+2025-08-02 02:11:39,425 - INFO - [38] Extracted: Estela - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:11:49,266 - INFO - [39] Extracted: Pesce lulu Seafood Kitchen NYC - Rating: 4.8 - Category: Seafood restaurant
+2025-08-02 02:11:59,528 - INFO - [40] Extracted: Freemans - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:12:09,220 - INFO - [41] Extracted: Le Coucou - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:12:18,684 - INFO - [42] Extracted: The Wilson - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:12:28,261 - INFO - [43] Extracted: Anytime Kitchen - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 02:12:37,889 - INFO - [44] Extracted: Forgione - Rating: 4.6 - Category: American restaurant
+2025-08-02 02:12:47,303 - INFO - [45] Extracted: Club A Steakhouse - Rating: 4.8 - Category: Steak house
+2025-08-02 02:12:56,697 - INFO - [46] Extracted: Atoboy - Rating: 4.5 - Category: Korean restaurant
+2025-08-02 02:13:06,187 - INFO - [47] Extracted: Hawksmoor NYC - Rating: 4.4 - Category: Steak house
+2025-08-02 02:13:15,832 - INFO - [48] Extracted: Rezdôra - Rating: 4.2 - Category: Italian restaurant
+2025-08-02 02:13:25,280 - INFO - [49] Extracted: Jungsik - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 02:13:34,613 - INFO - [50] Extracted: HORTUS NYC - Rating: 4.5 - Category: Asian fusion restaurant
+2025-08-02 02:13:44,425 - INFO - [51] Extracted: Le Pavillon - Rating: 4.6 - Category: French restaurant
+2025-08-02 02:13:54,007 - INFO - [52] Extracted: Mari Vanna - Rating: 4.5 - Category: Eastern European restaurant
+2025-08-02 02:14:04,073 - INFO - [53] Extracted: Reyna New York - Rating: 4.6 - Category: Mediterranean restaurant
+2025-08-02 02:14:13,805 - INFO - [54] Extracted: Raoul's - Rating: 4.5 - Category: French restaurant
+2025-08-02 02:14:23,348 - INFO - [55] Extracted: Felice 56 - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:14:23,902 - INFO - Processing batch 61-80 of 122 total elements
+2025-08-02 02:14:33,429 - INFO - [56] Extracted: Gelso & Grand - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:14:43,160 - INFO - [57] Extracted: Eleven Madison Park - Rating: 4.4 - Category: Fine dining restaurant
+2025-08-02 02:14:53,027 - INFO - [58] Extracted: OCabanon - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:15:02,473 - INFO - [59] Extracted: Black Iron Burger - Rating: 4.5 - Category: Hamburger restaurant
+2025-08-02 02:15:11,945 - INFO - [60] Extracted: Joseph's Restaurant - Rating: 4.5 - Category: Northern Italian restaurant
+2025-08-02 02:15:21,860 - INFO - [61] Extracted: Blue Fin - Rating: 4.2 - Category: Seafood restaurant
+2025-08-02 02:15:31,368 - INFO - [62] Extracted: Butcher and Banker NYC - Rating: 4.1 - Category: American restaurant
+2025-08-02 02:15:40,973 - INFO - [63] Extracted: The Palm – New York - Rating: 4.3 - Category: Steak house
+2025-08-02 02:15:50,563 - INFO - [64] Extracted: Felice 15 Gold - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 02:16:00,717 - INFO - [65] Extracted: Tasca NYC - Rating: 4.6 - Category: Latin American restaurant
+2025-08-02 02:16:10,109 - INFO - [66] Extracted: Benihana - Rating: 4.3 - Category: Japanese restaurant
+2025-08-02 02:16:19,472 - INFO - [67] Extracted: Jams - Rating: 4.2 - Category: Restaurant
+2025-08-02 02:16:28,979 - INFO - [68] Extracted: Charlie Bird - Rating: 4.3 - Category: Italian restaurant
+2025-08-02 02:16:38,800 - INFO - [69] Extracted: Beauty & Essex - Rating: 4.4 - Category: Restaurant
+2025-08-02 02:16:39,356 - INFO - Processing batch 81-100 of 122 total elements
+2025-08-02 02:16:48,873 - INFO - [70] Extracted: Marky's Caviar (Madison Ave.) - Rating: 4.4 - Category: Fine dining restaurant
+2025-08-02 02:16:58,780 - INFO - [71] Extracted: Tiny's & The Bar Upstairs - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:17:08,100 - INFO - [72] Extracted: S'MAC - Rating: 4.5 - Category: American restaurant
+2025-08-02 02:17:18,064 - INFO - [73] Extracted: Luchadores NYC - Rating: 4.3 - Category: Mexican restaurant
+2025-08-02 02:17:27,688 - INFO - [74] Extracted: Koloman - Rating: 4.4 - Category: Modern French restaurant
+2025-08-02 02:17:37,159 - INFO - [75] Extracted: P.J. Clarke's On The Hudson - Rating: 4.2 - Category: American restaurant
+2025-08-02 02:17:47,013 - INFO - [76] Extracted: Bill's Bar & Burger - Rating: 4.3 - Category: Hamburger restaurant
+2025-08-02 02:17:56,944 - INFO - [77] Extracted: Añejo - Rating: 4.4 - Category: Mexican restaurant
+2025-08-02 02:18:06,609 - INFO - [78] Extracted: Brooklyn Diner - Rating: 4.2 - Category: Diner
+2025-08-02 02:18:16,657 - INFO - [79] Extracted: La Mela - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:18:26,419 - INFO - [80] Extracted: Gayle's Broadway Rose - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:18:35,894 - INFO - [81] Extracted: Grand Central Oyster Bar - Rating: 4.2 - Category: Oyster bar restaurant
+2025-08-02 02:18:45,334 - INFO - [82] Extracted: Antalia NYC Restaurant/Caterer - Rating: 4.4 - Category: Turkish restaurant
+2025-08-02 02:18:54,848 - INFO - [83] Extracted: The Musket Room - Rating: 4.5 - Category: New American restaurant
+2025-08-02 02:19:04,351 - INFO - [84] Extracted: Lex Restaurant - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:19:13,885 - INFO - [85] Extracted: Dhamaka - Rating: 4.5 - Category: Indian restaurant
+2025-08-02 02:19:23,438 - INFO - [86] Extracted: Great NY Noodletown - Rating: 4.1 - Category: Chinese restaurant
+2025-08-02 02:19:23,983 - INFO - Processing batch 101-120 of 122 total elements
+2025-08-02 02:19:33,789 - INFO - [87] Extracted: noreetuh - Rating: 4.6 - Category: Hawaiian restaurant
+2025-08-02 02:19:43,393 - INFO - [88] Extracted: Nerai - Rating: 4.5 - Category: Greek restaurant
+2025-08-02 02:19:52,945 - INFO - [89] Extracted: Loi Estiatorio - Rating: 4.6 - Category: Greek restaurant
+2025-08-02 02:20:02,482 - INFO - [90] Extracted: Wolfgang's Steakhouse - Broadway New York City - Rating: 4.4 - Category: Steak house
+2025-08-02 02:20:12,014 - INFO - [91] Extracted: Vestry - Rating: 4.0 - Category: New American restaurant
+2025-08-02 02:20:21,498 - INFO - [92] Extracted: CUT by Wolfgang Puck - Rating: 4.4 - Category: Restaurant
+2025-08-02 02:20:30,875 - INFO - [93] Extracted: Indian Accent - Rating: 4.4 - Category: Indian restaurant
+2025-08-02 02:20:40,339 - INFO - [94] Extracted: Thai Diner - Rating: 4.4 - Category: Thai restaurant
+2025-08-02 02:20:49,871 - INFO - [95] Extracted: Casa Cruz Upper East Side Restaurant - Rating: 4.1 - Category: Restaurant
+2025-08-02 02:20:59,267 - INFO - [96] Extracted: Chalong Southern Thai - Rating: 4.8 - Category: Thai restaurant
+2025-08-02 02:21:08,655 - INFO - [97] Extracted: Majorelle - Rating: 4.6 - Category: Haute French restaurant
+2025-08-02 02:21:18,222 - INFO - [98] Extracted: Villa Mosconi Restaurant - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 02:21:28,287 - INFO - [99] Extracted: Wayla - Rating: 4.4 - Category: Thai restaurant
+2025-08-02 02:21:37,765 - INFO - [100] Extracted: Frevo - Rating: 4.8 - Category: Fine dining restaurant
+2025-08-02 02:21:47,248 - INFO - [101] Extracted: Empire Diner - Rating: 4.3 - Category: Diner
+2025-08-02 02:21:56,657 - INFO - [102] Extracted: Dos Caminos - Rating: 4.0 - Category: Mexican restaurant
+2025-08-02 02:22:06,341 - INFO - [103] Extracted: Lure Fishbar - Rating: 4.4 - Category: Restaurant
+2025-08-02 02:22:15,750 - INFO - [104] Extracted: Little Prince - Rating: 4.3 - Category: French restaurant
+2025-08-02 02:22:25,208 - INFO - [105] Extracted: Simple NYC: Best Chef Made Poke Bowl in NYC - Rating: 4.7 - Category: Poke bar
+2025-08-02 02:22:34,590 - INFO - [106] Extracted: Pure Thai Cookhouse - Rating: 4.6 - Category: Thai restaurant
+2025-08-02 02:22:35,144 - INFO - Processing batch 121-122 of 122 total elements
+2025-08-02 02:22:44,570 - INFO - [107] Extracted: Mari - Rating: 4.5 - Category: Korean restaurant
+2025-08-02 02:22:54,608 - INFO - [108] Extracted: Berimbau Brazilian Kitchen - West Village - Rating: 4.6 - Category: Brazilian restaurant
+2025-08-02 02:22:55,150 - INFO - Processed all 122 available business elements
+2025-08-02 02:22:55,151 - INFO - Total businesses extracted: 108
+2025-08-02 02:22:55,152 - INFO - Successfully scraped 108 businesses
+2025-08-02 02:22:55,167 - INFO - Saved 108 businesses to restaurants_New_York_1754083375.csv
+2025-08-02 02:22:55,175 - INFO - Saved 108 businesses to restaurants_New_York_1754083375.json
+2025-08-02 02:22:58,045 - INFO - WebDriver closed
+2025-08-02 02:34:53,463 - INFO - Setting up ChromeDriver...
+2025-08-02 02:34:53,464 - INFO - ====== WebDriver manager ======
+2025-08-02 02:34:54,550 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 02:34:55,730 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-02 02:34:56,466 - INFO - Driver [C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-08-02 02:34:56,469 - INFO - ChromeDriver found at: C:\Users\Abdul Rafay\.wdm\drivers\chromedriver\win64\138.0.7204.183\chromedriver-win32\chromedriver.exe
+2025-08-02 02:34:57,574 - INFO - ChromeDriver setup successful
+2025-08-02 02:34:57,574 - INFO - Searching for: restaurants New York
+2025-08-02 02:34:57,574 - INFO - Will scrape ALL available businesses using endless scrolling...
+2025-08-02 02:35:09,487 - INFO - Found results container with selector: [role="main"]
+2025-08-02 02:35:09,487 - INFO - Starting endless scrolling to load all businesses...
+2025-08-02 02:35:20,490 - INFO - Clicked 'Show more results' button
+2025-08-02 02:35:25,014 - INFO -    Scroll 1: Found 76 new businesses (total: 102)
+2025-08-02 02:35:36,564 - INFO - Clicked 'Show more results' button
+2025-08-02 02:35:38,819 - INFO - Found end of list message: 'You've reached the end of the list.' - Stopping scraping
+2025-08-02 02:35:38,848 - INFO - Scraping completed successfully. Total businesses found: 122
+2025-08-02 02:35:38,850 - INFO - Starting business data extraction...
+2025-08-02 02:35:38,891 - INFO - Processing batch 1-20 of 122 total elements
+2025-08-02 02:35:48,631 - INFO - [1] Extracted: Gramercy Tavern - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:35:58,099 - INFO - [2] Extracted: Boucherie West Village - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:36:07,429 - INFO - [3] Extracted: Balthazar - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:36:16,961 - INFO - [4] Extracted: Manhatta - Rating: 4.7 - Category: Restaurant
+2025-08-02 02:36:26,481 - INFO - [5] Extracted: Piccola Cucina Osteria Siciliana - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:36:36,099 - INFO - [6] Extracted: Le Bernardin - Rating: 4.6 - Category: French restaurant
+2025-08-02 02:36:45,627 - INFO - [7] Extracted: Via Carota - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:36:55,187 - INFO - [8] Extracted: OLIO E PIÙ - Rating: 4.7 - Category: Italian restaurant
+2025-08-02 02:37:04,733 - INFO - [9] Extracted: Au Cheval - Rating: 4.7 - Category: New American restaurant
+2025-08-02 02:37:14,162 - INFO - [10] Extracted: Boucherie Union Square - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:37:23,907 - INFO - [11] Extracted: Crown Shy - Rating: 4.5 - Category: American restaurant
+2025-08-02 02:37:33,504 - INFO - [12] Extracted: Katz's Delicatessen - Rating: 4.5 - Category: Deli
+2025-08-02 02:37:43,007 - INFO - [13] Extracted: Upland - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:37:52,618 - INFO - [14] Extracted: 1803 NYC - Rating: 4.5 - Category: Cajun restaurant
+2025-08-02 02:38:02,185 - INFO - [15] Extracted: Petite Boucherie - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:38:11,662 - INFO - [16] Extracted: Chama Mama - Rating: 4.6 - Category: Georgian restaurant
+2025-08-02 02:38:21,040 - INFO - [17] Extracted: Piccola Cucina Estiatorio - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:38:30,441 - INFO - [18] Extracted: Russ & Daughters Cafe - Rating: 4.6 - Category: American restaurant
+2025-08-02 02:38:40,230 - INFO - [19] Extracted: Atera - Rating: 4.6 - Category: New American restaurant
+2025-08-02 02:38:49,954 - INFO - [20] Extracted: Le Coucou - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:38:50,494 - INFO - Processing batch 21-40 of 122 total elements
+2025-08-02 02:39:00,112 - INFO - [21] Extracted: Junoon - Rating: 4.3 - Category: Indian restaurant
+2025-08-02 02:39:09,686 - INFO - [22] Extracted: COTE Korean Steakhouse - Rating: 4.6 - Category: Steak house
+2025-08-02 02:39:19,583 - INFO - [23] Extracted: MOE EATS NYC - Rating: 5.0 - Category: Restaurant
+2025-08-02 02:39:29,484 - INFO - [24] Extracted: Ci Siamo - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:39:38,907 - INFO - [25] Extracted: Riverpark - Rating: 4.6 - Category: New American restaurant
+2025-08-02 02:39:49,354 - INFO - [26] Extracted: Palma - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:40:00,222 - INFO - [27] Extracted: La Mercerie - Rating: 4.2 - Category: Restaurant
+2025-08-02 02:40:10,237 - INFO - [28] Extracted: Craft New York - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 02:40:19,666 - INFO - [29] Extracted: Benoit New York - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:40:29,119 - INFO - [30] Extracted: The York - Rating: 4.9 - Category: Pub
+2025-08-02 02:40:38,397 - INFO - [31] Extracted: Kochi - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 02:40:47,663 - INFO - [32] Extracted: SESAMO - Italian Restaurant Hell's Kitchen - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:40:57,279 - INFO - [33] Extracted: Hav & Mar - Rating: 4.5 - Category: Swedish restaurant
+2025-08-02 02:41:06,537 - INFO - [34] Extracted: Gallaghers Steakhouse - Rating: 4.6 - Category: Steak house
+2025-08-02 02:41:15,998 - INFO - [35] Extracted: Estela - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:41:25,586 - INFO - [36] Extracted: Clinton St. Baking Company - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:41:35,177 - INFO - [37] Extracted: Pesce lulu Seafood Kitchen NYC - Rating: 4.8 - Category: Seafood restaurant
+2025-08-02 02:41:44,411 - INFO - [38] Extracted: Freemans - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:41:44,939 - INFO - Processing batch 41-60 of 123 total elements
+2025-08-02 02:41:54,228 - INFO - [39] Extracted: The Wilson - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:42:03,649 - INFO - [40] Extracted: Comal - Rating: 4.8 - Category: Restaurant
+2025-08-02 02:42:13,470 - INFO - [41] Extracted: Shinzo Omakase - Rating: 4.9 - Category: Sushi restaurant
+2025-08-02 02:42:22,785 - INFO - [42] Extracted: Forgione - Rating: 4.6 - Category: American restaurant
+2025-08-02 02:42:32,048 - INFO - [43] Extracted: Buena Vista Restaurant & Bar - Rating: 4.7 - Category: Latin American restaurant
+2025-08-02 02:42:41,618 - INFO - [44] Extracted: Per Se - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 02:42:50,974 - INFO - [45] Extracted: Anytime Kitchen - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 02:43:00,486 - INFO - [46] Extracted: Atoboy - Rating: 4.5 - Category: Korean restaurant
+2025-08-02 02:43:09,783 - INFO - [47] Extracted: Felice 56 - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:43:19,114 - INFO - [48] Extracted: Hawksmoor NYC - Rating: 4.4 - Category: Steak house
+2025-08-02 02:43:28,598 - INFO - [49] Extracted: Jungsik - Rating: 4.6 - Category: Korean restaurant
+2025-08-02 02:43:37,862 - INFO - [50] Extracted: The Landing - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:43:47,193 - INFO - [51] Extracted: Tiny's & The Bar Upstairs - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:43:56,517 - INFO - [52] Extracted: Mari Vanna - Rating: 4.5 - Category: Eastern European restaurant
+2025-08-02 02:44:06,332 - INFO - [53] Extracted: HORTUS NYC - Rating: 4.5 - Category: Asian fusion restaurant
+2025-08-02 02:44:15,663 - INFO - [54] Extracted: Rezdôra - Rating: 4.2 - Category: Italian restaurant
+2025-08-02 02:44:24,980 - INFO - [55] Extracted: Gelso & Grand - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:44:34,254 - INFO - [56] Extracted: Reyna New York - Rating: 4.6 - Category: Mediterranean restaurant
+2025-08-02 02:44:34,785 - INFO - Processing batch 61-80 of 122 total elements
+2025-08-02 02:44:44,444 - INFO - [57] Extracted: Wildair - Rating: 4.4 - Category: New American restaurant
+2025-08-02 02:44:53,740 - INFO - [58] Extracted: S'MAC - Rating: 4.5 - Category: American restaurant
+2025-08-02 02:45:03,079 - INFO - [59] Extracted: ATOMIX - Rating: 4.7 - Category: Korean restaurant
+2025-08-02 02:45:12,337 - INFO - [60] Extracted: ROBERT - Rating: 4.5 - Category: American restaurant
+2025-08-02 02:45:22,048 - INFO - [61] Extracted: Gayle's Broadway Rose - Rating: 4.5 - Category: Restaurant
+2025-08-02 02:45:31,399 - INFO - [62] Extracted: Koloman - Rating: 4.4 - Category: Modern French restaurant
+2025-08-02 02:45:40,723 - INFO - [63] Extracted: Raoul's - Rating: 4.5 - Category: French restaurant
+2025-08-02 02:45:50,699 - INFO - [64] Extracted: Fish Cheeks - Rating: 4.8 - Category: Thai restaurant
+2025-08-02 02:46:00,988 - INFO - [65] Extracted: Kazumi Omakase - Rating: 4.9 - Category: Sushi restaurant
+2025-08-02 02:46:11,265 - INFO - [66] Extracted: Miznon - Rating: 4.5 - Category: Mediterranean restaurant
+2025-08-02 02:46:20,827 - INFO - [67] Extracted: Black Iron Burger - Rating: 4.5 - Category: Hamburger restaurant
+2025-08-02 02:46:30,324 - INFO - [68] Extracted: Dhamaka - Rating: 4.5 - Category: Indian restaurant
+2025-08-02 02:46:39,670 - INFO - [69] Extracted: The Dynamo Room - Rating: 4.8 - Category: Restaurant
+2025-08-02 02:46:48,967 - INFO - [70] Extracted: Butcher and Banker NYC - Rating: 4.1 - Category: American restaurant
+2025-08-02 02:46:58,523 - INFO - [71] Extracted: Sky Pavilion 川雲涧 - Rating: 4.7 - Category: Chinese restaurant
+2025-08-02 02:47:07,834 - INFO - [72] Extracted: Meijin Ramen - Rating: 4.7 - Category: Ramen restaurant
+2025-08-02 02:47:17,202 - INFO - [73] Extracted: Blue Fin - Rating: 4.2 - Category: Seafood restaurant
+2025-08-02 02:47:26,570 - INFO - [74] Extracted: The Musket Room - Rating: 4.5 - Category: New American restaurant
+2025-08-02 02:47:36,673 - INFO - [75] Extracted: Frenchette - Rating: 4.3 - Category: French restaurant
+2025-08-02 02:47:46,116 - INFO - [76] Extracted: OCabanon - Rating: 4.4 - Category: French restaurant
+2025-08-02 02:47:46,643 - INFO - Processing batch 81-100 of 122 total elements
+2025-08-02 02:47:56,015 - INFO - [77] Extracted: Trinity Place - Rating: 4.4 - Category: American restaurant
+2025-08-02 02:48:05,326 - INFO - [78] Extracted: Hanoi House - Rating: 4.5 - Category: Vietnamese restaurant
+2025-08-02 02:48:14,851 - INFO - [79] Extracted: noreetuh - Rating: 4.6 - Category: Hawaiian restaurant
+2025-08-02 02:48:24,214 - INFO - [80] Extracted: Mari - Rating: 4.5 - Category: Korean restaurant
+2025-08-02 02:48:33,542 - INFO - [81] Extracted: Torrisi - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 02:48:42,871 - INFO - [82] Extracted: Jams - Rating: 4.2 - Category: Restaurant
+2025-08-02 02:48:52,439 - INFO - [83] Extracted: Clover Hill - Rating: 4.6 - Category: Fine dining restaurant
+2025-08-02 02:49:01,727 - INFO - [84] Extracted: Maison Passerelle - Rating: 4.6 - Category: Restaurant
+2025-08-02 02:49:11,132 - INFO - [85] Extracted: Michael's New York - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 02:49:21,163 - INFO - [86] Extracted: Time Out Market New York - Rating: 4.5 - Category: Food court
+2025-08-02 02:49:30,809 - INFO - [87] Extracted: Tatiana by Kwame Onwuachi - Rating: 4.3 - Category: Caribbean restaurant
+2025-08-02 02:49:40,175 - INFO - [88] Extracted: P.J. Clarke's On The Hudson - Rating: 4.2 - Category: American restaurant
+2025-08-02 02:49:49,686 - INFO - [89] Extracted: Fuku Omakase - Rating: 4.8 - Category: Sushi restaurant
+2025-08-02 02:49:59,007 - INFO - [90] Extracted: Le Chêne - Rating: 4.7 - Category: French restaurant
+2025-08-02 02:50:08,667 - INFO - [91] Extracted: Temple Court - Rating: 4.5 - Category: Fine dining restaurant
+2025-08-02 02:50:18,000 - INFO - [92] Extracted: Joseph's Restaurant - Rating: 4.5 - Category: Northern Italian restaurant
+2025-08-02 02:50:27,625 - INFO - [93] Extracted: Felice 15 Gold - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 02:50:37,186 - INFO - [94] Extracted: Le French Diner - Rating: 4.5 - Category: French restaurant
+2025-08-02 02:50:46,752 - INFO - [95] Extracted: Congee Village - Rating: 4.1 - Category: Chinese restaurant
+2025-08-02 02:50:56,053 - INFO - [96] Extracted: Majorelle - Rating: 4.6 - Category: Haute French restaurant
+2025-08-02 02:50:56,599 - INFO - Processing batch 101-120 of 122 total elements
+2025-08-02 02:51:05,899 - INFO - [97] Extracted: Marky's Caviar (Madison Ave.) - Rating: 4.4 - Category: Fine dining restaurant
+2025-08-02 02:51:15,462 - INFO - [98] Extracted: Lex Restaurant - Rating: 4.6 - Category: Italian restaurant
+2025-08-02 02:51:24,748 - INFO - [99] Extracted: Berimbau Brazilian Kitchen - West Village - Rating: 4.6 - Category: Brazilian restaurant
+2025-08-02 02:51:34,061 - INFO - [100] Extracted: Charlie Bird - Rating: 4.3 - Category: Italian restaurant
+2025-08-02 02:51:43,424 - INFO - [101] Extracted: DK Restaurant NYC - Rating: 4.3 - Category: Steak house
+2025-08-02 02:51:52,732 - INFO - [102] Extracted: Chalong Southern Thai - Rating: 4.8 - Category: Thai restaurant
+2025-08-02 02:52:02,051 - INFO - [103] Extracted: Wayla - Rating: 4.4 - Category: Thai restaurant
+2025-08-02 02:52:12,752 - INFO - [104] Extracted: Loi Estiatorio - Rating: 4.6 - Category: Greek restaurant
+2025-08-02 02:52:26,332 - INFO - [105] Extracted: Casa Cruz Upper East Side Restaurant - Rating: 4.1 - Category: Restaurant
+2025-08-02 02:52:44,404 - INFO - [106] Extracted: 53 - Rating: 4.1 - Category: Restaurant
+2025-08-02 02:52:56,573 - INFO - [107] Extracted: Nobu Downtown - Rating: 4.3 - Category: Restaurant
+2025-08-02 02:53:06,051 - INFO - [108] Extracted: Beauty & Essex - Rating: 4.4 - Category: Restaurant
+2025-08-02 02:53:16,142 - INFO - [109] Extracted: Great NY Noodletown - Rating: 4.1 - Category: Chinese restaurant
+2025-08-02 02:53:27,144 - INFO - [110] Extracted: Eleven Madison Park - Rating: 4.4 - Category: Fine dining restaurant
+2025-08-02 02:53:37,761 - INFO - [111] Extracted: Gage & Tollner - Rating: 4.3 - Category: American restaurant
+2025-08-02 02:53:49,366 - INFO - [112] Extracted: Nittis Italian Restaurant in Hell's Kitchen - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:54:00,854 - INFO - [113] Extracted: Bubba Gump Shrimp Co. - Rating: 4.4 - Category: Italian restaurant
+2025-08-02 02:54:19,835 - INFO - [114] Extracted: Villa Mosconi Restaurant - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 02:54:37,720 - INFO - [115] Extracted: Blue Ribbon Brasserie - Rating: 4.5 - Category: Italian restaurant
+2025-08-02 02:54:38,247 - INFO - Processing batch 121-122 of 122 total elements
+2025-08-02 02:54:48,171 - INFO - [116] Extracted: Cervo's - Rating: 4.5 - Category: Seafood restaurant
+2025-08-02 02:54:59,162 - INFO - [117] Extracted: Bua Thai Ramen & Robata Grill - Rating: 4.8 - Category: Thai restaurant
+2025-08-02 02:54:59,710 - INFO - Processed all 122 available business elements
+2025-08-02 02:54:59,711 - INFO - Total businesses extracted: 117
+2025-08-02 02:54:59,711 - INFO - Successfully scraped 117 businesses
+2025-08-02 02:54:59,744 - INFO - Saved 117 businesses to restaurants_New_York_1754085299.csv
+2025-08-02 02:54:59,750 - INFO - Saved 117 businesses to restaurants_New_York_1754085299.json
+2025-08-02 02:55:03,426 - INFO - WebDriver closed
